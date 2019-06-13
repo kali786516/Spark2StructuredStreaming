@@ -60,3 +60,4 @@ CREATE TABLE IF NOT EXISTS customer (
   dob timestamp,
   PRIMARY KEY(cc_num)
 );
+
