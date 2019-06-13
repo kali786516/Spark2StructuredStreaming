@@ -1,4 +1,4 @@
-package com.dataframe.part11.kinesis.consumer
+package com.dataframe.part11.kinesis.consumer.TransactionExampleJson
 
 /**
   * Created by kalit_000 on 6/13/19.

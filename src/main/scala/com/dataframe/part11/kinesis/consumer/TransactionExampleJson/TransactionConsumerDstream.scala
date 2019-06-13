@@ -1,13 +1,13 @@
-package com.dataframe.part11.kinesis.consumer
+package com.dataframe.part11.kinesis.consumer.TransactionExampleJson
 
 import com.amazonaws.services.kinesis.clientlibrary.lib.worker.InitialPositionInStream
 import org.apache.spark.SparkConf
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.storage.StorageLevel
-import org.apache.spark.streaming.{Duration, Seconds, StreamingContext}
-import org.apache.spark.streaming.kinesis.KinesisUtils
-import org.apache.spark.sql.types._
 import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types._
+import org.apache.spark.storage.StorageLevel
+import org.apache.spark.streaming.kinesis.KinesisUtils
+import org.apache.spark.streaming.{Duration, Seconds, StreamingContext}
 
 /**
   * Created by kalit_000 on 6/13/19.

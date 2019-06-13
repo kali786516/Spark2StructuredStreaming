@@ -1,4 +1,4 @@
-package com.dataframe.part11.kinesis.producer
+package com.dataframe.part11.kinesis.producer.TrasnactionExampleJson
 
 /**
   * Created by kalit_000 on 6/13/19.

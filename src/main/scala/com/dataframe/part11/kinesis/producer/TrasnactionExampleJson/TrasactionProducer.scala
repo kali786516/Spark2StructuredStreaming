@@ -1,27 +1,19 @@
-package com.dataframe.part11.kinesis.producer
+package com.dataframe.part11.kinesis.producer.TrasnactionExampleJson
 
 /**
   * Created by kalit_000 on 6/13/19.
   */
 import java.io.File
-import java.nio.charset.Charset
-
-import com.amazonaws.services.kinesis.AmazonKinesisClient
-import com.amazonaws.services.kinesis.model.PutRecordRequest
-import org.apache.commons.csv.{CSVFormat, CSVParser}
-import org.apache.spark.SparkConf
-import org.apache.spark.internal.Logging
-import org.apache.spark.storage.StorageLevel
-import org.apache.spark.streaming.{Milliseconds, StreamingContext}
-import java.io.File
 import java.nio.ByteBuffer
 import java.nio.charset.Charset
 import java.text.SimpleDateFormat
-import java.util.{Date, Properties, Random, TimeZone}
+import java.util.{Date, Random, TimeZone}
 
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain
-import org.apache.commons.csv.{CSVFormat, CSVParser}
+import com.amazonaws.services.kinesis.AmazonKinesisClient
+import com.amazonaws.services.kinesis.model.PutRecordRequest
 import com.google.gson.{Gson, JsonObject}
+import org.apache.commons.csv.{CSVFormat, CSVParser}
 
 
 object TrasactionProducer {
