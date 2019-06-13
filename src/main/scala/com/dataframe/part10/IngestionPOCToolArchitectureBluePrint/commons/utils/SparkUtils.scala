@@ -1,10 +1,10 @@
-package com.dataframe.part10.IngestionPOC.commons.utils
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils
 
 import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.spark.sql.types.StructType
-import com.dataframe.part10.IngestionPOC.commons.exception._
-import com.dataframe.part10.IngestionPOC.workflow.ApplicationConfig
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.workflow.ApplicationConfig
 import java.nio.file.Files
 import java.io.File
 import java.util

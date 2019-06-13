@@ -1,4 +1,4 @@
-package com.dataframe.part10.IngestionPOC.commons.exception
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception
 
 import java.sql.SQLException
 

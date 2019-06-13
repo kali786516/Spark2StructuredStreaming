@@ -1,12 +1,12 @@
-package com.dataframe.part10.IngestionPOC.workflow
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.workflow
 
 import org.apache.log4j.{Level, Logger}
-
-import com.dataframe.part10.IngestionPOC.commons.exception.CommandLineArgumentException
-import com.dataframe.part10.IngestionPOC.commons.utils.{IngestionUtils, Parse, SparkUtils}
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils.{IngestionUtils, Parse, SparkUtils}
 import org.apache.commons.cli
 import org.apache.commons.cli.{Option, Options}
-import com.dataframe.part10.IngestionPOC.commons.exception._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
+import com.dataframe.part6.Email.commons.exception.CommandLineArgumentException
 
 /**
   * Created by kalit_000 on 6/8/19.

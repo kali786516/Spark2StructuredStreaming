@@ -1,11 +1,11 @@
-package com.dataframe.part10.IngestionPOC.workflow
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.workflow
 
 import java.util
 
-import com.dataframe.part10.IngestionPOC.commons.exception._
-import com.dataframe.part10.IngestionPOC.commons.utils.{EmailUtils, SparkUtils}
-import com.dataframe.part10.IngestionPOC.commons.utils.SparkUtils._
-import com.dataframe.part10.IngestionPOC.components.ComponentUtil
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils.{EmailUtils, SparkUtils}
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils.SparkUtils._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components.ComponentUtil
 import org.apache.spark.sql.SparkSession
 
 import scala.collection.JavaConversions._

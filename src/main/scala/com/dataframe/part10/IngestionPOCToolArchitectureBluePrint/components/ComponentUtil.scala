@@ -1,7 +1,7 @@
-package com.dataframe.part10.IngestionPOC.components
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components
 
-import com.dataframe.part10.IngestionPOC.components.Component
-import com.dataframe.part10.IngestionPOC.commons.exception._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components.Component
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
 
 /**
   * Created by kalit_000 on 6/11/19.
@@ -16,7 +16,7 @@ object ComponentUtil {
 
     try {
 
-      val clazz                     = classLoader.loadClass(s"com.dataframe.part10.IngestionPOC.components.${compName}")
+      val clazz                     = classLoader.loadClass(s"com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components.${compName}")
       component                     = Some(clazz.newInstance().asInstanceOf[Component])
     } catch {
       case _: ClassNotFoundException =>
@@ -27,7 +27,7 @@ object ComponentUtil {
         } catch {
           case _: ClassNotFoundException =>
             try {
-              val clazz             = classLoader.loadClass(s"com.dataframe.part10.IngestionPOC.components.$compName")
+              val clazz             = classLoader.loadClass(s"com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components.$compName")
 
               component             = Some(clazz.newInstance().asInstanceOf[Component])
             } catch {

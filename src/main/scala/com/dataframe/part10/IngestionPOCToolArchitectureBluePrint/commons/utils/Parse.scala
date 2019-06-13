@@ -1,11 +1,11 @@
-package com.dataframe.part10.IngestionPOC.commons.utils
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils
 
 /**
   * Created by kalit_000 on 6/8/19.
   */
 
-import com.dataframe.part10.IngestionPOC.commons.exception
-import com.dataframe.part10.IngestionPOC.commons.exception.IngestionException
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception.IngestionException
 import org.apache.commons.cli._
 import org.slf4j.LoggerFactory
 

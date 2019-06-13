@@ -1,6 +1,6 @@
-package com.dataframe.part10.IngestionPOC.workflow
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.workflow
 
-import com.dataframe.part10.IngestionPOC.commons.utils.SparkUtils
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils.SparkUtils
 import org.apache.spark.sql._
 
 

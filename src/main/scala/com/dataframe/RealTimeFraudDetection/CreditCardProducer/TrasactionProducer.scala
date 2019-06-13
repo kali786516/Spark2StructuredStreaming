@@ -57,6 +57,17 @@ object TrasactionProducer {
 
       //println("Transaction Details:" + record.get(0),record.get(1),record.get(2),record.get(3),timestamp, record.get(7),record.get(8),record.get(9), record.get(10), record.get(11))
 
+      /*
+      Example Data
+
+       Transaction Record:
+       {"cc_num":"cc_num","first":"first","last":"last","trans_num":"trans_num","trans_time":"2019-06-13 01:45:24","category":"category","merchant":"merchant","amt":"amt","merch_lat":"merch_lat","merch_long":"merch_long"}
+       Sent data to partition: 1 and offset: 395
+       Transaction Record: {"cc_num":"180094108369013","first":"John","last":"Holland","trans_num":"80f5177be11f0bcd768e06a0b1b294c8","trans_time":"2019-06-13 01:45:26","category":"personal_care","merchant":"Hills-Boyer","amt":"64","merch_lat":"39.011566","merch_long":"-119.937831"}
+       Sent data to partition: 0 and offset: 395
+
+      */
+
       obj.addProperty(TransactionKafkaEnum.cc_num, record.get(0))
       obj.addProperty(TransactionKafkaEnum.first, record.get(1))
       obj.addProperty(TransactionKafkaEnum.last, record.get(2))

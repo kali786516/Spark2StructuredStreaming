@@ -1,12 +1,12 @@
-package com.dataframe.part10.IngestionPOC.commons.utils
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils
 
 import com.amazonaws.regions.Regions
 import com.amazonaws.services.simpleemail.{AmazonSimpleEmailService, AmazonSimpleEmailServiceClientBuilder}
 import com.amazonaws.services.simpleemail.model._
-import com.dataframe.part10.IngestionPOC.commons.exception.IngestionException
-import com.dataframe.part10.IngestionPOC.commons.utils.SparkUtils.getEnumArgVariableValue
-import com.dataframe.part10.IngestionPOC.workflow.ApplicationConfig
-import com.dataframe.part10.IngestionPOC.commons.exception._
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception.IngestionException
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils.SparkUtils.getEnumArgVariableValue
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.workflow.ApplicationConfig
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
 
 
 /**

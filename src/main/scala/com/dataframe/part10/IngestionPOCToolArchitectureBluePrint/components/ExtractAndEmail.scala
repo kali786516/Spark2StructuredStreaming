@@ -1,5 +1,5 @@
-package com.dataframe.part10.IngestionPOC.components
-import com.dataframe.part10.IngestionPOC.workflow.ApplicationConfig
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components
+import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.workflow.ApplicationConfig
 
 /**
   * Created by kalit_000 on 6/11/19.

@@ -1,0 +1,25 @@
+# Install local jar command
+mvn install:install-file \
+   -Dfile=<path-to-file> \
+   -DgroupId=<group-id> \
+   -DartifactId=<artifact-id> \
+   -Dversion=<version> \
+   -Dpackaging=<packaging> \
+   -DgeneratePom=true
+
+
+
+mvn install:install-file \
+   -Dfile=/Users/kalit_000/Downloads/spark-sql-kinesis_2.11-2.2.0.jar \
+   -DgroupId=org.apache.spark \
+   -DartifactId=spark-sql-kinesis_2.11 \
+   -Dversion=2.2.0 \
+   -Dpackaging=jar \
+   -DgeneratePom=true
+
+git clone https://github.com/qubole/kinesis-sql.git
+cd kinesis-sql
+mvn install -DskipTests
+
+
+

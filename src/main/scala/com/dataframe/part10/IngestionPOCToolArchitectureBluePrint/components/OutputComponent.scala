@@ -1,4 +1,4 @@
-package com.dataframe.part10.IngestionPOC.components
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.components
 
 /**
   * Created by kalit_000 on 6/11/19.

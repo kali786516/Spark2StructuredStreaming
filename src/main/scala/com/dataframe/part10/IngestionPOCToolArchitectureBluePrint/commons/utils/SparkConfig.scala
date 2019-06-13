@@ -1,4 +1,4 @@
-package com.dataframe.part10.IngestionPOC.commons.utils
+package com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils
 
 import org.apache.log4j.Logger
 import org.apache.spark.SparkConf
