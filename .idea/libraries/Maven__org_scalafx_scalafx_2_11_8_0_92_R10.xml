@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.scalafx:scalafx_2.11:8.0.92-R10">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scalafx/scalafx_2.11/8.0.92-R10/scalafx_2.11-8.0.92-R10.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scalafx/scalafx_2.11/8.0.92-R10/scalafx_2.11-8.0.92-R10-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scalafx/scalafx_2.11/8.0.92-R10/scalafx_2.11-8.0.92-R10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

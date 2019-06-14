@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.amazonaws:sagemaker-spark_2.11:spark_2.2.0-1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/sagemaker-spark_2.11/spark_2.2.0-1.0/sagemaker-spark_2.11-spark_2.2.0-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/sagemaker-spark_2.11/spark_2.2.0-1.0/sagemaker-spark_2.11-spark_2.2.0-1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/sagemaker-spark_2.11/spark_2.2.0-1.0/sagemaker-spark_2.11-spark_2.2.0-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
