@@ -3,6 +3,7 @@ package com.dataframe.part12.kafkaSqlServer.producer
 /**
   * Created by kalit_000 on 6/13/19.
   */
+/*
 import org.apache.spark.SparkConf 
 import org.apache.log4j.Logger 
 import org.apache.log4j.Level 
@@ -14,9 +15,11 @@ import kafka.producer.Producer
 import java.util.Properties
  //import org.apache.spark.streaming.{Seconds,StreamingContext} 
 import org.apache.spark._
+*/
 
 object KafkaProducerFromSqlServer {
   def main(args: Array[String]): Unit = {
+    /*
 
     Logger.getLogger("org").setLevel(Level.WARN) 
     Logger.getLogger("akka").setLevel(Level.WARN)  
@@ -68,6 +71,7 @@ object KafkaProducerFromSqlServer {
       } 
       /*close SQL Server database connection*/ 
       connection.close() 
+      */
 
   }
 }

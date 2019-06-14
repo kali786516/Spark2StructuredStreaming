@@ -283,7 +283,12 @@
         https://www.youtube.com/watch?v=NZaH4tjwMYg
          -->
 
-
+        <!-- Sage Maker Spark-->
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>sagemaker-spark_2.11</artifactId>
+            <version>spark_2.2.0-1.0</version>
+        </dependency>
 
     </dependencies>
 </project>

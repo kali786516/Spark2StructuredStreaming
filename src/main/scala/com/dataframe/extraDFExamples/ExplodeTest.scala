@@ -181,6 +181,9 @@ object ExplodeTest {
     companiesDF.select($"company",posexplode($"employees").as(Seq("employeesPosition","employee"))).show(10)
     */
 
+
+
+
   }
 
 }

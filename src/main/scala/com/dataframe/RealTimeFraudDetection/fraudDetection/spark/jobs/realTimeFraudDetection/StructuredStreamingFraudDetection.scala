@@ -33,7 +33,7 @@ object StructuredStreamingFraudDetection extends SparkJob("Structured Streaming 
     val rawStream              = KafkaSource.readStream()
 
     val transactionStream      = rawStream
-      .selectExpr("transaction.*", "partition", "offset")
+      .select("transaction.*", "partition", "offset")
       .withColumn("amt", lit($"amt") cast(DoubleType))
       .withColumn("merch_lat", lit($"merch_lat") cast(DoubleType))
       .withColumn("merch_long", lit($"merch_long") cast(DoubleType))

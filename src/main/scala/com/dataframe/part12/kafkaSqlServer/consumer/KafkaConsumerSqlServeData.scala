@@ -3,27 +3,30 @@ package com.dataframe.part12.kafkaSqlServer.consumer
 /**
   * Created by kalit_000 on 6/13/19.
   */
-
-import kafka.serializer.StringDecoder 
-import org.apache.spark._ 
-import org.apache.spark.SparkContext._ 
-import org.apache.spark.sql.SQLContext 
-import org.apache.spark.SparkConf 
-import org.apache.log4j.Logger 
-import org.apache.log4j.Level 
-import org.apache.spark.streaming.dstream.InputDStream 
+/*
+import kafka.serializer.StringDecoder
+import org.apache.spark._
+import org.apache.spark.SparkContext._
+import org.apache.spark.sql.SQLContext
+import org.apache.spark.SparkConf
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+import org.apache.spark.streaming.dstream.InputDStream
 import org.apache.spark.streaming.{Seconds,StreamingContext}
-import org.apache.spark._ 
+import org.apache.spark._
 import  org.apache.spark.streaming._
- import org.apache.spark.streaming.StreamingContext._ 
-import org.apache.spark.streaming.kafka.KafkaUtils 
-import  org.apache.spark.streaming.kafka._ 
-import com.datastax.spark.connector.streaming._ 
+ import org.apache.spark.streaming.StreamingContext._
+import org.apache.spark.streaming.kafka.KafkaUtils
+import  org.apache.spark.streaming.kafka._
+import com.datastax.spark.connector.streaming._
 import org.apache.spark.streaming.kafka._
+*/
 
 object KafkaConsumerSqlServeData {
 
   def main(args: Array[String]): Unit = {
+
+    /*
 
     Logger.getLogger("org").setLevel(Level.WARN) 
     Logger.getLogger("akka").setLevel(Level.WARN)
@@ -45,6 +48,7 @@ object KafkaConsumerSqlServeData {
 
     ssc.start() 
     ssc.awaitTermination() 
+    */
 
   }
 
