@@ -62,9 +62,6 @@
     <orderEntry type="library" name="Maven: org.roaringbitmap:RoaringBitmap:0.5.11" level="project" />
     <orderEntry type="library" name="Maven: commons-net:commons-net:2.2" level="project" />
     <orderEntry type="library" name="Maven: org.json4s:json4s-jackson_2.11:3.2.11" level="project" />
-    <orderEntry type="library" name="Maven: org.json4s:json4s-core_2.11:3.2.11" level="project" />
-    <orderEntry type="library" name="Maven: org.json4s:json4s-ast_2.11:3.2.11" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scalap:2.11.0" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.core:jersey-client:2.22.2" level="project" />
     <orderEntry type="library" name="Maven: javax.ws.rs:javax.ws.rs-api:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:hk2-api:2.4.0-b34" level="project" />
@@ -301,7 +298,6 @@
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.8" level="project" />
     <orderEntry type="library" name="Maven: org.scalatest:scalatest_2.11:3.0.0-SNAP4" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.2" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:3.15" level="project" />
@@ -343,8 +339,6 @@
     <orderEntry type="library" name="Maven: bouncycastle:bcprov-jdk14:138" level="project" />
     <orderEntry type="library" name="Maven: ml.dmlc:xgboost4j-spark:0.81" level="project" />
     <orderEntry type="library" name="Maven: ml.dmlc:xgboost4j:0.81" level="project" />
-    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-actor_2.11:2.3.11" level="project" />
-    <orderEntry type="library" name="Maven: com.typesafe:config:1.2.1" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware.kryo:kryo:2.21" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware.reflectasm:reflectasm:shaded:1.07" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware.minlog:minlog:1.2" level="project" />
@@ -409,7 +403,21 @@
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.8" level="project" />
     <orderEntry type="library" name="Maven: org.apache.spark:spark-streaming-kinesis-asl_2.11:2.3.0" level="project" />
     <orderEntry type="library" name="Maven: com.amazonaws:amazon-kinesis-client:1.7.3" level="project" />
-    <orderEntry type="library" name="Maven: com.amazonaws:sagemaker-spark_2.11:spark_2.2.0-1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-aws:2.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http_2.11:10.1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-http-core_2.11:10.1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-parsing_2.11:10.1.8" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-stream_2.11:2.5.22" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-actor_2.11:2.5.22" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe:config:1.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang.modules:scala-java8-compat_2.11:0.7.0" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe.akka:akka-protobuf_2.11:2.5.22" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.typesafe:ssl-config-core_2.11:0.3.7" level="project" />
+    <orderEntry type="library" name="Maven: org.json4s:json4s-native_2.11:3.6.6" level="project" />
+    <orderEntry type="library" name="Maven: org.json4s:json4s-core_2.11:3.6.6" level="project" />
+    <orderEntry type="library" name="Maven: org.json4s:json4s-ast_2.11:3.6.6" level="project" />
+    <orderEntry type="library" name="Maven: org.json4s:json4s-scalap_2.11:3.6.6" level="project" />
+    <orderEntry type="library" name="Maven: com.lihaoyi:requests_2.11:0.1.6" level="project" />
   </component>
 </module>

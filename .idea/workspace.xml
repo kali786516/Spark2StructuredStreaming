@@ -1,0 +1,1163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b3f2065-4c20-4199-a0d5-238b9b8c47ff" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_lihaoyi_requests_2_11_0_1_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_http_2_11_10_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_http_core_2_11_10_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_parsing_2_11_10_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_protobuf_2_11_2_5_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_stream_2_11_2_5_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_ssl_config_core_2_11_0_3_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_native_2_11_3_6_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_scalap_2_11_3_6_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_java8_compat_2_11_0_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_2_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/api/Forex.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/api/WebServer.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/CompoundInterest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/NetWorth.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/NetWorthMultiCurrency.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/CompoundInterestSpec.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/ForexSpec.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/NetWorthSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_sagemaker_spark_2_11_spark_2_2_0_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_actor_2_11_2_3_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_akka_akka_actor_2_11_2_5_22.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_config_1_2_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_typesafe_config_1_3_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_aws_2_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_ast_2_11_3_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_ast_2_11_3_6_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_core_2_11_3_2_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json4s_json4s_core_2_11_3_6_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_11_1_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_modules_scala_xml_2_11_1_2_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_scala_lang_scalap_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/scala_sdk_2_11_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/scala_sdk_2_11_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spark2StructuredStreaming.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Spark2StructuredStreaming.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamDataSource/customerDatasets/static_datasets/join_static_personal_details.csv" beforeDir="false" afterPath="$PROJECT_DIR$/StreamDataSource/customerDatasets/static_datasets/join_static_personal_details.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDTMLDFExampleTwo.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDTMLDFExampleTwo.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDecionTreesMLDataFrame.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDecionTreesMLDataFrame.scala" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/fileSearcher/FilterCheckerTests.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-end-line="15" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/CompoundInterestSpec.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Worksheet" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>random</find>
+      <find>filter</find>
+      <find>booster</find>
+      <find>label</find>
+      <find>publicIp</find>
+      <find>batch</find>
+      <find>park-sql-kafka-0-10_2.11</find>
+      <find>spark-streaming-kafka-0-8-assembly_2.10</find>
+      <find>spark-sql-kafka-0-10_2.11</find>
+      <find>spark-sql-kafka</find>
+      <find>partitionOfRecords</find>
+      <find>spark-streaming-kafka-0-10_2.11</find>
+      <find>PARTITION_ASSIGNMENT_STRATEGY_CONFIG</find>
+      <find>spark-cassandra-connector_2.11</find>
+      <find>kafka</find>
+      <find>socket</find>
+      <find>spring-boot-starter-websocket</find>
+      <find>log4j-over-slf4j</find>
+      <find>commons</find>
+      <find>fraudData</find>
+      <find>cassandra</find>
+      <find>deleteLocalRunningFolder</find>
+      <find>fs</find>
+      <find>seqCompValues</find>
+      <find>aws</find>
+      <find>aws-java-sdk</find>
+      <find>customerAgeDF</find>
+      <find>test</find>
+      <find>spring</find>
+      <find>toDouble</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/main/scala/com/dataframe/part10/fraudalertdashboard/dashboard</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/components/ReadKafka.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/components/ReadS3.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/components/SqlETL.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/components/CompleteAudit.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/components/ExtractAndEmail.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/commons/utils/SparkUtils.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOC/workflow/WorkFlowUtils.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/ingestionPOCRunBook/ingestionPocRunbook.txt" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOCToolArchitectureBluePrint/workflow/IngestionEngineDriver.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOCToolArchitectureBluePrint/components/ComponentUtil.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/producer/TransactionKinesisEnum.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisDStream.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/MavenJarCommand.txt" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisSimpleStrcutredStreaming.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/kinesis/kinesis_commands.txt" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/DstreamEample2.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/producer/KinesisSimpleProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/CreditCardProducer/TrasactionProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/producer/TrasactionProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/TransactionConusmerDstream.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/Enums.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/jobs/realTimeFraudDetection/DstreamFraudDetection.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/TransactionConsumerDstream.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/TransactionExampleJson/Enums.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/TransactionExampleJson/TransactionConsumerDstream.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/producer/TrasnactionExampleJson/TrasactionProducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/clustering/UberClustering.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisConsumerDynamoDB/Enums.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisConsumerDynamoDB/TransactionConsumerDstream.scala" />
+        <option value="$PROJECT_DIR$/src/main/resources/cassandra/creditcard.cql" />
+        <option value="$PROJECT_DIR$/src/main/resources/cassandra/comcast.sql" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part13/comcastCassandraTest/ComcastSparkCassandra.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part13/comcastCassandraTest/ComcastSparkMeanQuartile.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part12/kafkaSqlServer/consumer/KafkaConsumerSqlServeData.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part12/kafkaSqlServer/producer/KafkaProducerFromSqlServer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/jobs/realTimeFraudDetection/StructuredStreamingFraudDetection.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/SparkSageMakerML/xgboost/SageMakerXGBoostExample.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/ExplodeTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/SparkReadZipFiles.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/CompoundInterest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/NetWorth.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDTMLDFExampleTwo.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDecionTreesMLDataFrame.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/DataBalancing.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/api/Forex.scala" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/api/WebServer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/NetWorthMultiCurrency.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/NetWorthSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/ForexSpec.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/CompoundInterestSpec.scala" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Spark2StructuredStreaming" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Spark2StructuredStreaming" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1920" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="dataframe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="fileSearcher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Spark2StructuredStreaming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Spark2StructuredStreaming" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="bankingExchangeRatesTestCase" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="EmailException&#9;FILE&#9;file:///Users/kalit_000/Downloads/Spark2StructuredStreaming/src/main/scala/com/dataframe/part6/Email/commons/exception/EmailException.scala&#10;SparkConfig&#9;null&#9;null&#10;Utils&#9;FILE&#9;file:///Users/kalit_000/Downloads/Spark2StructuredStreaming/src/main/scala/com/dataframe/part9/fraudDetection/utils/Utils.scala&#10;SendDbEmailAndResultsReport&#9;null&#9;null&#10;RewardSavings&#9;null&#9;null&#10;StringSerializer&#9;PSI&#9;JAVA://org.apache.kafka.common.serialization.StringSerializer" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.21793003" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sparkZipDataSets" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/resources/cassandra" />
+      <recent name="$PROJECT_DIR$/src/main/resources/data" />
+      <recent name="$PROJECT_DIR$/sparkMLDataSets" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.dataframe.part11.kinesis.consumer.KinesisConsumerDynamoDB" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sparkZipDataSets" />
+      <recent name="$PROJECT_DIR$/sparkMLDataSets" />
+      <recent name="$PROJECT_DIR$/src/main/resources/spark" />
+      <recent name="$PROJECT_DIR$/sparkDeepLearningDataSets" />
+      <recent name="$PROJECT_DIR$/StreamDataSource" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.WebServer">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Forex" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.dataframe.part14.bankingExchangeRates.api.Forex" />
+      <module name="Spark2StructuredStreaming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataframe.part14.bankingExchangeRates.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SageMakerXGBoostExample" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.dataframe.part14.SparkSageMakerML.xgboost.SageMakerXGBoostExample" />
+      <module name="Spark2StructuredStreaming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataframe.part14.SparkSageMakerML.xgboost.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkReadZipFiles" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.dataframe.extraDFExamples.SparkReadZipFiles" />
+      <module name="Spark2StructuredStreaming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataframe.extraDFExamples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrasactionProducer (1)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.dataframe.part11.kinesis.producer.TrasnactionExampleJson.TrasactionProducer" />
+      <module name="Spark2StructuredStreaming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataframe.part11.kinesis.producer.TrasnactionExampleJson.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebServer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.dataframe.part14.bankingExchangeRates.api.WebServer" />
+      <module name="Spark2StructuredStreaming" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.dataframe.part14.bankingExchangeRates.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.SageMakerXGBoostExample" />
+      <item itemvalue="Application.SparkReadZipFiles" />
+      <item itemvalue="Application.TrasactionProducer (1)" />
+      <item itemvalue="Application.WebServer" />
+      <item itemvalue="Application.Forex" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WebServer" />
+        <item itemvalue="Application.Forex" />
+        <item itemvalue="Application.SparkReadZipFiles" />
+        <item itemvalue="Application.SageMakerXGBoostExample" />
+        <item itemvalue="Application.TrasactionProducer (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7b3f2065-4c20-4199-a0d5-238b9b8c47ff" name="Default" comment="" />
+      <created>1557846517919</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557846517919</updated>
+    </task>
+    <task id="LOCAL-00001" summary="new files">
+      <created>1558459604085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558459604085</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new files 2">
+      <created>1558459640845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558459640845</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new files 2">
+      <created>1559067043010</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559067043010</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new files 2">
+      <created>1559070690954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559070690954</updated>
+    </task>
+    <task id="LOCAL-00005" summary="new files 2">
+      <created>1559270116642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1559270116642</updated>
+    </task>
+    <task id="LOCAL-00006" summary="new files 2">
+      <created>1559270787883</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559270787883</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Spark Streaming Fraud Alert Project">
+      <created>1559592153731</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1559592153731</updated>
+    </task>
+    <task id="LOCAL-00008" summary="new files 2">
+      <created>1559853588270</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1559853588270</updated>
+    </task>
+    <task id="LOCAL-00009" summary="new files 2">
+      <created>1560020703837</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560020703837</updated>
+    </task>
+    <task id="LOCAL-00010" summary="new files 2">
+      <created>1560301852659</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560301852659</updated>
+    </task>
+    <task id="LOCAL-00011" summary="new files 2">
+      <created>1560443880071</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1560443880071</updated>
+    </task>
+    <task id="LOCAL-00012" summary="new files 2">
+      <created>1560444423048</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560444423048</updated>
+    </task>
+    <task id="LOCAL-00013" summary="new files 2">
+      <created>1560446636849</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560446636849</updated>
+    </task>
+    <task id="LOCAL-00014" summary="new files 2">
+      <created>1560454669417</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1560454669417</updated>
+    </task>
+    <task id="LOCAL-00015" summary="new files 2">
+      <created>1560456134787</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560456134787</updated>
+    </task>
+    <task id="LOCAL-00016" summary="new files 2">
+      <created>1560457412251</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560457412251</updated>
+    </task>
+    <task id="LOCAL-00017" summary="new files 2">
+      <created>1560547702576</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560547702576</updated>
+    </task>
+    <task id="LOCAL-00018" summary="new files 2">
+      <created>1560552353843</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1560552353843</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="FilterCheckerTests - 2019.05.25 at 16h 28m 54s.xml">
+      <configuration name="FilterCheckerTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MatcherTests - 2019.05.26 at 11h 32m 21s.xml">
+      <configuration name="MatcherTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MatcherTests - 2019.05.26 at 11h 32m 59s.xml">
+      <configuration name="MatcherTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MatcherTests - 2019.05.26 at 11h 33m 47s.xml">
+      <configuration name="MatcherTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1920" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22523962" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Nl-Palette" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="ConsoleMavenPlugin" />
+      <window_info anchor="bottom" id="SQL" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2980198" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.5524753" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.42079207" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32970297" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32970297" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.47029704" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.56534654" />
+      <window_info anchor="right" id="Maven-2 Build" order="0" weight="0.32960597" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24973376" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.08785942" />
+      <window_info anchor="right" id="Properties" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Maven" order="10" visible="true" weight="0.20234291" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.cql" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new files" />
+    <MESSAGE value="Spark Streaming Fraud Alert Project" />
+    <MESSAGE value="new files 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="new files 2" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/clustering/UberClustering.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sparkMLDataSets/uber.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisConsumerDynamoDB/Enums.scala">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/KpmgTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3793">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/producer/TrasnactionExampleJson/TrasactionProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" lean-forward="true" selection-end-line="114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/SeqToDF.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="18" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/FunctionsTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisConsumerDynamoDB/TransactionConsumerDstream.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="71" column="77" selection-start-line="71" selection-start-column="77" selection-end-line="71" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cassandra/comcast.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/cassandra/creditcard.cql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOCToolArchitectureBluePrint/workflow/WorkFlowUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="6" selection-start-line="69" selection-start-column="6" selection-end-line="69" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOCToolArchitectureBluePrint/workflow/WorkflowExecutor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part13/comcastCassandraTest/ComcastSparkMeanQuartile.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part13/comcastCassandraTest/ComcastSparkCassandra.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="65" lean-forward="true" selection-start-line="64" selection-start-column="2" selection-end-line="66" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part12/kafkaSqlServer/consumer/KafkaConsumerSqlServeData.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part12/kafkaSqlServer/producer/KafkaProducerFromSqlServer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="73" column="8" selection-start-line="73" selection-start-column="8" selection-end-line="73" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/CreditCardProducer/TrasactionProducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1147">
+          <caret line="109" column="35" selection-start-line="109" selection-start-column="22" selection-end-line="109" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/spark/spark-sql_2.11/2.3.0/spark-sql_2.11-2.3.0.jar!/org/apache/spark/sql/SparkSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part8/sparkDeepLearning/XGBoost/TitanicXGBoost.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/amazonaws/sagemaker-spark_2.11/spark_2.2.0-1.0/sagemaker-spark_2.11-spark_2.2.0-1.0.jar!/com/amazonaws/services/sagemaker/sparksdk/algorithms/KMeansSageMakerEstimator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="76" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part14/SparkSageMakerML/xgboost/SageMakerXGBoostExample.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/jobs/realTimeFraudDetection/StructuredStreamingFraudDetection.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="23" column="23" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/jobs/SparkJob.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/SparkConfig.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/ExplodeTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2249">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/DstreamEample2.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/util/zip/ZipInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="78" column="11" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/SparkReadZipFiles.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" selection-end-line="65" />
+          <folding>
+            <element signature="e#39#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part11/kinesis/consumer/KinesisDStream.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part10/IngestionPOCToolArchitectureBluePrint/workflow/IngestionEngineDriver.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2715">
+          <caret line="181" column="7" selection-start-line="181" selection-start-column="7" selection-end-line="181" selection-end-column="7" />
+          <folding>
+            <element signature="e#77#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json4s/json4s-native_2.12/3.6.6/json4s-native_2.12-3.6.6.jar!/org/json4s/native/JsonMethods.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/SparkUDFExample.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/SplitTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/BigDataPatnerShipTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="20" column="47" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/jobs/realTimeFraudDetection/DstreamFraudDetection.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="93" column="38" selection-start-line="93" selection-start-column="38" selection-end-line="93" selection-end-column="38" />
+          <folding>
+            <element signature="e#95#224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/DataReader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/extraDFExamples/AggOutPutTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="e#39#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDTMLDFExampleTwo.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-656">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part7/sparkml/DecisionTrees/Wine/WineDecionTreesMLDataFrame.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="39" column="14" selection-start-line="39" selection-end-line="39" selection-end-column="28" />
+          <folding>
+            <element signature="e#56#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/config/Config.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/RealTimeFraudDetection/fraudDetection/spark/DataBalancing.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="e#112#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="279" column="21" selection-start-line="279" selection-start-column="21" selection-end-line="279" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/NetWorthMultiCurrency.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-465">
+          <caret line="1" column="58" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/api/WebServer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#56#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/CompoundInterest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/calculators/NetWorth.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/NetWorthSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="69" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/ForexSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="e#45#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/dataframe/part14/bankingExchangeRates/api/Forex.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" lean-forward="true" selection-start-column="8" selection-end-column="53" />
+          <folding>
+            <element signature="e#54#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/fileSearcher/FilterCheckerTests.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/part14/bankingExchangeRatesTestCase/CompoundInterestSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.42418772" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.42418772" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.10.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spark2StructuredStreaming</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.21793003" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.44387755" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
