@@ -23,7 +23,7 @@ object FileStreamAppendMode {
       .appName("CSVFileStream")
       //.config("spark.driver.memory","2g")
       //.config("spark.cassandra.connection.host","localhost")
-      .enableHiveSupport()
+      //.enableHiveSupport()
       .getOrCreate()
 
     import spark.implicits._

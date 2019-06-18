@@ -1,22 +1,18 @@
 package com.dataframe.strcuturedStreamingExamples
 
-/**
-  * Created by kalit_000 on 5/17/19.
-  */
-import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.streaming._
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.types._
-import java.sql.Date
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
-import org.json4s.DateFormat
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions.callUDF
+import org.apache.spark.sql.streaming.Trigger
+import org.apache.spark.sql.types.StructType
 
-object FileStreamCompleteModeGroup {
+object TriggerOnceCSVExample {
+
   def main(args: Array[String]): Unit = {
+
     val logger = Logger.getLogger("HbIngestion")
     Logger.getLogger("org").setLevel(Level.WARN)
     Logger.getLogger("akka").setLevel(Level.WARN)
@@ -42,7 +38,7 @@ object FileStreamCompleteModeGroup {
       .add("month", "string")
 
     val fileStreamDF = spark.readStream.option("header","true")
-      .option("maxFilesPerTrigger",1)
+      //.option("maxFilesPerTrigger",1)
       .schema(schemaUntyped).csv("StreamDataSource/droplocation")
 
     println(fileStreamDF.isStreaming)
@@ -55,17 +51,16 @@ object FileStreamCompleteModeGroup {
 
     val trimmedDF = fileStreamDF.select($"value",$"major_category",$"minor_category",$"year",$"month",$"borough").withColumnRenamed("value","convictions")
 
-    trimmedDF.createOrReplaceTempView("test")
+    val trimmedDF2=trimmedDF.withColumn("timestamp",callUDF("addTimeStamp"))
 
-    val df2=spark.sql("with cte as (select convictions,addTimeStamp() as timestamp_value from test) select sum(convictions) as convictions,timestamp_value from cte group by timestamp_value")
+    val query = trimmedDF2.writeStream.trigger(Trigger.Once).format("parquet")
+      .option("checkpointLocation", "StreamCheckPoint3")
+      .start("StructuresStreamingOP2/data/")
 
-    val query = df2.writeStream.outputMode("complete")
-      .format("console")
-      .option("truncate","false")
-      .trigger(Trigger.ProcessingTime("5 seconds"))
-      //.option("numRows",30)
-      .start()
-      .awaitTermination()
+    query.stop
+
+
+
 
 
   }

@@ -2,7 +2,16 @@ package com.dataframe.part14.bankingExchangeRates.api
 import scala.collection.immutable
 import scala.xml._
 import org.json4s.JsonDSL._
-import org.json4s.native.JsonMethods._
+//import org.json4s.native.JsonMethods._
+
+/*
+        <dependency>
+            <groupId>org.json4s</groupId>
+            <artifactId>json4s-native_2.11</artifactId>
+            <version>3.6.6</version>
+        </dependency>
+
+ */
 
 object Forex {
   def getExchangeRates():Map[String,Double] = {
@@ -15,7 +24,7 @@ object Forex {
     currencyCodeMultipliers
   }
 
-  def getRatesAsJson():String = compact(render(getExchangeRates()))
+  //def getRatesAsJson():String = compact(render(getExchangeRates()))
 
   def main(args: Array[String]): Unit = {
     println(getExchangeRates())

@@ -6,7 +6,9 @@ import akka.http.scaladsl.server.{HttpApp, Route}
 import akka.http.scaladsl.server
 import com.dataframe.part14.bankingExchangeRates.api.Forex
 
-object WebServer extends HttpApp{
+object WebServer {
+  /*
+  extends HttpApp
 def routes:server.Route =
     path("rates") {
       get {
@@ -18,6 +20,6 @@ def routes:server.Route =
 object WebServerServerApplication  extends App {
   val port: Int = sys.env.getOrElse("PORT", "8080").toInt
   WebServer.startServer("0.0.0.0", port)
-
+*/
 }
 

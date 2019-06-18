@@ -6,7 +6,8 @@ import akka.http.scaladsl.server.HttpApp
 import akka.http.scaladsl.server.{HttpApp, Route}
 import akka.http.scaladsl.server
 
-object WebServer extends HttpApp{
+object WebServer {
+  /*
 def routes:server.Route =
     path("rates") {
       get {
@@ -18,6 +19,6 @@ def routes:server.Route =
 object WebServerServerApplication  extends App {
   val port: Int = sys.env.getOrElse("PORT", "8080").toInt
   WebServer.startServer("0.0.0.0", port)
-
+*/
 }
 
