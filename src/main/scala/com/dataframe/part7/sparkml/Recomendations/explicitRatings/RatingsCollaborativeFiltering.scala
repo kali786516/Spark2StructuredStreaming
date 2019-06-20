@@ -69,6 +69,8 @@ object RatingsCollaborativeFiltering {
 
     println("Get Predictions Step  3....................................................")
 
+    testdata.show(10,false)
+
     val predictions = model.transform(testdata)
 
     predictions.show(10)
@@ -102,6 +104,10 @@ object RatingsCollaborativeFiltering {
     println("-" * 100 )
 
     println("note if below code should work cahnge the mllb to <artifactId>spark-mllib_2.11</artifactId> <version>2.3.1</version>")
+
+
+    model.write.overwrite()
+      .save("SparkMLModels/RatingCollaborative/Recomendation.model_v1")
 
     /*
 

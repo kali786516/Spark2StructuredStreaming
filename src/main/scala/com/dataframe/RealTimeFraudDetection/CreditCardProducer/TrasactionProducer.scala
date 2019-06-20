@@ -108,10 +108,11 @@ object TrasactionProducer {
   def main(args: Array[String]) {
 
     applicationConf = ConfigFactory.parseFile(new File(args(0)))
+    println(applicationConf.getString("kafka.producer.file"))
     load
     producer = new KafkaProducer[String, String](props)
     val file = applicationConf.getString("kafka.producer.file")
-    publishJsonMsg(file)
+    publishJsonMsg("/Users/kalit_000/Downloads/gitCode/Spark2StructuredStreaming/src/main/resources/data/transactions.csv")
 
   }
 

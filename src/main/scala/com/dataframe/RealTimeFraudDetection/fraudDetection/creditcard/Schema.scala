@@ -58,6 +58,4 @@ object Schema {
     .add(Enums.TransactionKafka.merch_lat, StringType, true)
     .add(Enums.TransactionKafka.merch_long, StringType, true)
 
-
-
 }

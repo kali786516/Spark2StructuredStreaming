@@ -369,13 +369,13 @@
     <orderEntry type="library" name="Maven: com.lowagie:itext:2.1.5" level="project" />
     <orderEntry type="library" name="Maven: bouncycastle:bcmail-jdk14:138" level="project" />
     <orderEntry type="library" name="Maven: bouncycastle:bcprov-jdk14:138" level="project" />
-    <orderEntry type="library" name="Maven: ml.dmlc:xgboost4j-spark:0.81" level="project" />
-    <orderEntry type="library" name="Maven: ml.dmlc:xgboost4j:0.81" level="project" />
+    <orderEntry type="library" name="Maven: ml.dmlc:xgboost4j-spark:0.80" level="project" />
+    <orderEntry type="library" name="Maven: ml.dmlc:xgboost4j:0.80" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware.kryo:kryo:2.21" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware.reflectasm:reflectasm:shaded:1.07" level="project" />
     <orderEntry type="library" name="Maven: com.esotericsoftware.minlog:minlog:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.objenesis:objenesis:1.2" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.11.12" level="project" />
+    <orderEntry type="library" name="Maven: org.scala-lang:scala-compiler:2.11.8" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-client:2.7.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-common:2.7.2" level="project" />

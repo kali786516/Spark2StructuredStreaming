@@ -1,17 +1,8 @@
-package com.dataframe.strcuturedStreamingExamples
+package com.dataframe.strcuturedStreamingExamples.KafkaStrcutredStreaming
 
-/**
-  * Created by kalit_000 on 5/17/19.
-  */
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.streaming._
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.types._
-import java.sql.Date
-import java.text.SimpleDateFormat
-import java.util.Calendar
+import org.apache.spark.sql.streaming.Trigger
 
 object SparkKafkaConsumer {
   def main(args: Array[String]): Unit = {
@@ -26,22 +17,26 @@ object SparkKafkaConsumer {
       .config("spark.driver.memory","2g")
       .config("spark.cassandra.connection.host","localhost")
       .config("partition.assignment.strategy","range")
-      .enableHiveSupport()
+      //.enableHiveSupport()
       .getOrCreate()
 
-    import spark.implicits._
-
-    val kafkaStream = spark.readStream.format("kafka").option("kafka.bootstrap.servers","localhost:2181")
-                           .option("subscribe","spark_avro_topic")
+    val kafkaStream = spark.readStream.format("kafka").option("kafka.bootstrap.servers","localhost:9092")
+                           .option("subscribe","creditcardTransaction")
                            .option("startingOffsets","latest")
                            .option("partition.assignment.strategy","range")
                            .load
 
-    val kafkaDF = kafkaStream.selectExpr("CAST(value as STRING) as message")
+    val kafkaDF = kafkaStream.selectExpr("CAST(value as STRING) as ")
 
     //kafkaDF.show(false)
 
-    val query = kafkaDF.writeStream.outputMode("append")
+    val df = ParseKafkaJsonMessage.praseJsonMessage(kafkaStream,"value",spark)
+
+    val df1 = ParseKafkaJsonMessage.splitDataFrame(df,spark)
+
+    //ParseKafkaJsonMessage.dfShow(df)
+
+    val query = df1.writeStream.outputMode("append")
                        .format("console")
                        .option("truncate","false")
                        .trigger(Trigger.ProcessingTime("5 seconds"))

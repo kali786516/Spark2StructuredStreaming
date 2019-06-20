@@ -82,6 +82,8 @@ object TitanicClustering {
 
     assemberDF.show(10)
 
+    assemberDF.printSchema()
+
     println("Build Model Step  3....................................................")
 
     val kmeans = new KMeans().setK(5).setSeed(1)
@@ -110,6 +112,13 @@ object TitanicClustering {
 
     clusteredData.groupBy("prediction").agg(avg("Survived"),avg("Pclass"),avg("Age"),
                         avg("Fare"),avg("Gender"),avg("Boarded"),count("prediction")).orderBy("prediction").show(10)
+
+
+
+
+    model.write.overwrite()
+      .save("SparkMLModels/TitanicClustering/TitanicClustering.model_v1")
+
 
     sc.stop()
 

@@ -227,13 +227,11 @@
         </dependency>
 
         <!-- DeepLearning XG Boost -->
-
         <dependency>
             <groupId>ml.dmlc</groupId>
             <artifactId>xgboost4j-spark</artifactId>
-            <version>0.81</version>
+            <version>0.80</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector -->
         <!--<dependency>
