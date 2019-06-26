@@ -513,5 +513,6 @@
     <orderEntry type="library" name="Maven: com.typesafe.akka:akka-stream-kafka_2.11:1.0" level="project" />
     <orderEntry type="library" name="Maven: com.amazon.emr:emr-dynamodb-hadoop:4.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.1" level="project" />
+    <orderEntry type="library" name="Maven: com.audienceproject:spark-dynamodb_2.11:0.4.3" level="project" />
   </component>
 </module>

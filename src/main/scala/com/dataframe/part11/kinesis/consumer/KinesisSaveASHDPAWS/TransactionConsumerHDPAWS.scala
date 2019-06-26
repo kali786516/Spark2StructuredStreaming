@@ -24,6 +24,12 @@ import org.apache.hadoop.dynamodb.read.DynamoDBInputFormat
 import org.apache.hadoop.dynamodb.write.DynamoDBOutputFormat
 import org.apache.hadoop.mapred.JobConf
 
+/*
+#AWS
+spark-submit --class com.dataframe.part11.kinesis.consumer.KinesisSaveASHDPAWS.TransactionConsumerHDPAWS --master local[*] --num-executors 3  \
+--driver-memory 5g --executor-memory 5g --executor-cores 3 ./Spark2StructuredStreaming-1.0-SNAPSHOT-jar-with-dependencies.jar "app5" "creditcardTransaction6" "creditcardTransactionMonolicitalHDPAWS"
+*/
+
 object TransactionConsumerHDPAWS {
 
   def main(args: Array[String]): Unit = {
@@ -69,7 +75,7 @@ object TransactionConsumerHDPAWS {
     ddbConf.set("mapred.input.format.class", "org.apache.hadoop.dynamodb.read.DynamoDBInputFormat")
     ddbConf.set("mapred.output.format.class", "org.apache.hadoop.dynamodb.write.DynamoDBOutputFormat")
 
-    lines.foreachRDD {
+    lines.cache().foreachRDD {
 
       rdd =>
         if (!rdd.isEmpty()) {
@@ -83,13 +89,17 @@ object TransactionConsumerHDPAWS {
             .withColumn("merch_long", lit($"merch_long") cast (DoubleType))
             .withColumn("trans_time", lit($"trans_time") cast (TimestampType))
 
-          kinesisTransactionDF.show(false)
-
           kinesisTransactionDF.createOrReplaceTempView("DynamoDBTempTable")
 
-          val dynamoDBDF = spark.sql("select concat(cast(cc_num as string),':',cast(monotonically_increasing_id() as string)) as cc_num_and_trans_time ,* from DynamoDBTempTable")
+          spark.sql("select distinct concat(cast(cc_num as string),':',cast(now() as string)) as cc_num_and_trans_time ,cast(first as string) as first," +
+            "cast(last as string) as last,cast(trans_num as string) as trans_num,cast(trans_time as string) as trans_time,cast(category as string) as category," +
+            "cast(merchant as string) as merchant,amt,merch_lat,merch_long from DynamoDBTempTable").show(false)
 
-          var ddbInsertFormattedRDD = dynamoDBDF.map(a => {
+          val dynamoDBDF = spark.sql("select distinct concat(cast(cc_num as string),':',cast(now() as string)) as cc_num_and_trans_time ,cast(first as string) as first," +
+            "cast(last as string) as last,cast(trans_num as string) as trans_num,cast(trans_time as string) as trans_time,cast(category as string) as category," +
+            "cast(merchant as string) as merchant,amt,merch_lat,merch_long from DynamoDBTempTable")
+
+          var ddbInsertFormattedRDD = dynamoDBDF.rdd.map(a => {
           var ddbMap = new HashMap[String, AttributeValue]()
 
           var cc_num_and_trans_time = new AttributeValue()
@@ -102,20 +112,45 @@ object TransactionConsumerHDPAWS {
 
           var first = new AttributeValue()
           first.setS(a.get(2).toString)
-          ddbMap.put("cc_num", first)
+          ddbMap.put("first", first)
 
           var last = new AttributeValue()
           last.setS(a.get(3).toString)
-          ddbMap.put("cc_num", last)
+          ddbMap.put("last", last)
 
           var trans_num = new AttributeValue()
           trans_num.setS(a.get(4).toString)
-          ddbMap.put("cc_num", trans_num)
+          ddbMap.put("trans_num", trans_num)
+
+          var trans_time = new AttributeValue()
+          trans_time.setS(a.get(5).toString)
+          ddbMap.put("trans_time", trans_time)
+
+          var category = new AttributeValue()
+          category.setS(a.get(6).toString)
+          ddbMap.put("category", category)
+
+          var merchant = new AttributeValue()
+          merchant.setS(a.get(7).toString)
+          ddbMap.put("merchant", merchant)
+
+          var amt = new AttributeValue()
+          amt.setS(a.get(8).toString)
+          ddbMap.put("amt", amt)
+
+          var merch_lat = new AttributeValue()
+          merch_lat.setS(a.get(9).toString)
+          ddbMap.put("merch_lat", merch_lat)
+
+          var merch_long = new AttributeValue()
+          merch_long.setS(a.get(10).toString)
+          ddbMap.put("merch_long", merch_long)
 
           var item = new DynamoDBItemWritable()
           item.setItem(ddbMap)
+          val r = scala.util.Random
 
-          (new Text(""), item)
+          (new Text(r.nextInt.toString), item)
           }
           )
           ddbInsertFormattedRDD.saveAsHadoopDataset(ddbConf)

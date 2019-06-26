@@ -357,6 +357,13 @@
             <version>4.5.0</version>
         </dependency>
 
+        <!--Spark DynamoDB-->
+        <dependency>
+            <groupId>com.audienceproject</groupId>
+            <artifactId>spark-dynamodb_2.11</artifactId>
+            <version>0.4.3</version>
+        </dependency>
+
     </dependencies>
 </project>
 
