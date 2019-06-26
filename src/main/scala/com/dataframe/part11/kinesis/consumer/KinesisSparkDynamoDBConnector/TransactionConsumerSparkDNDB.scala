@@ -27,8 +27,8 @@ import com.audienceproject.spark.dynamodb.implicits._
 
 /*
 #SparkDynamoDB
-spark-submit --class com.dataframe.part11.kinesis.consumer.KinesisSparkDynamoDBConnector.TransactionConsumerSparkDNDB --master local[*] --num-executors 3  \
---driver-memory 5g --executor-memory 5g --executor-cores 3 ./Spark2StructuredStreaming-1.0-SNAPSHOT-jar-with-dependencies.jar "app6" "creditcardTransaction6" "creditcardTransactionMonolicitalSparkDNDB"
+spark-submit --class com.dataframe.part11.kinesis.consumer.KinesisSparkDynamoDBConnector.TransactionConsumerSparkDNDB \
+ ./Spark2StructuredStreaming-1.0-SNAPSHOT-jar-with-dependencies.jar "app6" "creditcardTransaction6" "creditcardTransactionMonolicitalSparkDNDB"
 */
 
 object TransactionConsumerSparkDNDB {

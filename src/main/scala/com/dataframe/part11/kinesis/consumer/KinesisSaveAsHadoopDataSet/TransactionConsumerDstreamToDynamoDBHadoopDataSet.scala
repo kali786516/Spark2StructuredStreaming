@@ -21,8 +21,8 @@ Example Take from here
 https://stackoverflow.com/questions/47722648/spark-2-2-0-how-to-write-read-dataframe-to-dynamodb
 
 #Consumer
-spark-submit --class com.dataframe.part11.kinesis.consumer.KinesisSaveAsHadoopDataSet.TransactionConsumerDstreamToDynamoDBHadoopDataSet --master local[*] --num-executors 3  \
---driver-memory 5g --executor-memory 5g --executor-cores 3 ./Spark2StructuredStreaming-1.0-SNAPSHOT-jar-with-dependencies.jar "app4" "creditcardTransaction6" "creditcardTransactionDBHadoopDataSet"
+spark-submit --class com.dataframe.part11.kinesis.consumer.KinesisSaveAsHadoopDataSet.TransactionConsumerDstreamToDynamoDBHadoopDataSet /
+./Spark2StructuredStreaming-1.0-SNAPSHOT-jar-with-dependencies.jar "app4" "creditcardTransaction6" "creditcardTransactionDBHadoopDataSet"
 
 
 */
