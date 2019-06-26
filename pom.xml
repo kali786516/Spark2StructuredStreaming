@@ -145,12 +145,12 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk</artifactId>
-            <version>1.11.375</version>
+            <version>1.11.579</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
-            <version>1.11.375</version>
+            <version>1.11.579</version>
         </dependency>
         <dependency>
             <groupId>com.github.scopt</groupId>
@@ -350,6 +350,12 @@
             <version>1.0</version>
         </dependency>
 
+        <!--DynamoDB HAdoop-->
+        <dependency>
+            <groupId>com.amazon.emr</groupId>
+            <artifactId>emr-dynamodb-hadoop</artifactId>
+            <version>4.5.0</version>
+        </dependency>
 
     </dependencies>
 </project>

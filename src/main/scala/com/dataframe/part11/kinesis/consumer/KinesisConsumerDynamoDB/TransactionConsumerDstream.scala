@@ -37,10 +37,12 @@ object TransactionConsumerDstreamToDynamoDB {
     val ssc = new StreamingContext("local[*]", "KinesisExample", Seconds(1))
 
     val kinesisStream   = KinesisUtils.createStream(
-      ssc, "creditcardTransactionConsumer", "creditcardTransaction", "kinesis.us-east-1.amazonaws.com",
+      ssc, "creditcardTransactionConsumer", "creditcardTransaction2", "kinesis.us-east-1.amazonaws.com",
       "us-east-1", InitialPositionInStream.LATEST, Duration(2000), StorageLevel.MEMORY_AND_DISK_2)
 
     val lines           = kinesisStream.map(x => new String(x))
+
+    println(lines)
 
     val dynamodDBClinet = AmazonDynamoDBClientBuilder.standard().withRegion("us-east-1").build
     val dynamoDBCon     = new DynamoDB(dynamodDBClinet)
@@ -54,6 +56,17 @@ object TransactionConsumerDstreamToDynamoDB {
     lines.foreachRDD{
 
       rdd =>
+        //println(rdd)
+        val kinesisTransactionDF2  = rdd.toDF("transaction")
+          .withColumn(kinesisTransactionStructureName, // nested structure with our json
+            from_json($"transaction", kinesisTransactionSchema)) //From binary to JSON object
+          .select("transaction.*")
+          .withColumn("amt", lit($"amt") cast (DoubleType))
+          .withColumn("merch_lat", lit($"merch_lat") cast (DoubleType))
+          .withColumn("merch_long", lit($"merch_long") cast (DoubleType))
+          .withColumn("trans_time", lit($"trans_time") cast (TimestampType))
+        kinesisTransactionDF2.show(false)
+
         if (!rdd.isEmpty()) {
 
           val kinesisTransactionDF  = rdd.toDF("transaction")
@@ -71,7 +84,10 @@ object TransactionConsumerDstreamToDynamoDB {
 
           val dynamoDBDF = spark.sql("select concat(cast(cc_num as string),':',cast(trans_time as string)) as cc_num_and_trans_time ,* from DynamoDBTempTable")
 
+          val schema_ddb = dynamoDBDF.dtypes
+
           val dyJson     = dynamoDBDF.toJSON.collect()
+
 
           dynamoDBDF.show(false)
 

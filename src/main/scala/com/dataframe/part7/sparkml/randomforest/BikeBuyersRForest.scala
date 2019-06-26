@@ -71,6 +71,7 @@ object BikeBuyersRForest {
     val metrics = new BinaryClassificationMetrics(predictionsAndLabels)
     printMetrics(metrics)
 
+
     spark.stop()
 
 

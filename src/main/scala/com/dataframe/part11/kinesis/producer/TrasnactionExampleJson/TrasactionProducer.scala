@@ -22,12 +22,13 @@ object TrasactionProducer {
 
     //val Array(stream, endpoint, recordsPerSecond, wordsPerRecord) = args
 
-    val stream           = "creditcardTransaction"
+    val stream           = "creditcardTransaction3"
     val endpoint         = "kinesis.us-east-1.amazonaws.com"
     val region           = "us-east-1"
     val recordsPerSecond = 10
     val wordsPerRecord   = 5
-    val fileName         = "/Users/kalit_000/Downloads/Spark2StructuredStreaming/src/main/resources/data/transactions.csv"
+    val fileName         = "/Users/kalit_000/Downloads/gitCode/Spark2StructuredStreaming/src/main/resources/data/transactions.csv"
+
 
     publishJsonMsg(fileName,endpoint,10,stream)
 

@@ -1,0 +1,9 @@
+aws kinesis list-streams
+
+aws kinesis put-record --stream-name test-stream --partition-key 1 --data 1
+
+aws kinesis describe-stream --stream-name tweets-stream
+
+Sairam786516 --> https://awslabs.github.io/amazon-kinesis-data-generator/web/producer.html#
+
+

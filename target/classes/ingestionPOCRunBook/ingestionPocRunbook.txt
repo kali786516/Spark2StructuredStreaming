@@ -1,0 +1,1 @@
+-w ingestion_poc -t srtummal@amazon.com -f srtummal@amazon.com -b 20190101 -a audit_db.audit_table -m ingestionPocMetadata/ingestion_poc_metadata.txt -e IngestionPOC -g srtummal@amazon.com -p /tmp -o local -q "dev"
