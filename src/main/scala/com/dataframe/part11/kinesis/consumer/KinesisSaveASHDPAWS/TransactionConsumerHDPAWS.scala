@@ -1,4 +1,4 @@
-package com.dataframe.part11.kinesis.consumer.KinesisSaveAsHadoopDataSet
+package com.dataframe.part11.kinesis.consumer.KinesisSaveASHDPAWS
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder
 import com.amazonaws.services.dynamodbv2.document.{DynamoDB, Item}
@@ -14,22 +14,25 @@ import org.apache.spark.streaming.kinesis.KinesisUtils
 import org.apache.hadoop.mapred.JobConf
 import com.amazonaws.services.dynamodbv2.model.AttributeValue
 import java.util.HashMap
+import com.dataframe.part11.kinesis.consumer.KinesisSaveAsHadoopDataSet.Enums
 import org.apache.hadoop.dynamodb.DynamoDBItemWritable
 import org.apache.hadoop.io.Text
-/*
-Example Take from here
-https://stackoverflow.com/questions/47722648/spark-2-2-0-how-to-write-read-dataframe-to-dynamodb
-*/
+import org.apache.hadoop.io.LongWritable
+import org.apache.hadoop.dynamodb.DynamoDBItemWritable
+import com.amazonaws.services.dynamodbv2.model.AttributeValue
+import org.apache.hadoop.dynamodb.read.DynamoDBInputFormat
+import org.apache.hadoop.dynamodb.write.DynamoDBOutputFormat
+import org.apache.hadoop.mapred.JobConf
 
-object TransactionConsumerDstreamToDynamoDBHadoopDataSet {
+object TransactionConsumerHDPAWS {
+
   def main(args: Array[String]): Unit = {
-
     val transactionStructureName = "transaction"
 
     /* Schema of transaction msgs received from Kafka. Json msg is received from Kafka. Hence evey field is treated as String */
     val kinesisTransactionStructureName = transactionStructureName
     val kinesisTransactionSchema = new StructType()
-      .add(Enums.TransactionConsumerKinesis.cc_num, StringType,true)
+      .add(Enums.TransactionConsumerKinesis.cc_num, StringType, true)
       .add(Enums.TransactionConsumerKinesis.first, StringType, true)
       .add(Enums.TransactionConsumerKinesis.last, StringType, true)
       .add(Enums.TransactionConsumerKinesis.trans_num, StringType, true)
@@ -42,15 +45,15 @@ object TransactionConsumerDstreamToDynamoDBHadoopDataSet {
 
     val ssc = new StreamingContext("local[*]", "KinesisExampleHadoopExample", Seconds(1))
 
-    val kinesisStream   = KinesisUtils.createStream(
+    val kinesisStream = KinesisUtils.createStream(
       ssc, args(0), args(1), "kinesis.us-east-1.amazonaws.com",
       "us-east-1", InitialPositionInStream.LATEST, Duration(2000), StorageLevel.MEMORY_AND_DISK_2)
 
-    val lines           = kinesisStream.map(x => new String(x))
+    val lines = kinesisStream.map(x => new String(x))
 
     val dynamodDBClinet = AmazonDynamoDBClientBuilder.standard().withRegion("us-east-1").build
-    val dynamoDBCon     = new DynamoDB(dynamodDBClinet)
-    val dynamoDBTable   = dynamoDBCon.getTable(args(2))
+    val dynamoDBCon = new DynamoDB(dynamodDBClinet)
+    val dynamoDBTable = dynamoDBCon.getTable(args(2))
 
     val conf = new SparkConf()
       .setAppName("Sample")
@@ -66,12 +69,12 @@ object TransactionConsumerDstreamToDynamoDBHadoopDataSet {
     ddbConf.set("mapred.input.format.class", "org.apache.hadoop.dynamodb.read.DynamoDBInputFormat")
     ddbConf.set("mapred.output.format.class", "org.apache.hadoop.dynamodb.write.DynamoDBOutputFormat")
 
-    lines.foreachRDD{
+    lines.foreachRDD {
 
       rdd =>
         if (!rdd.isEmpty()) {
 
-          val kinesisTransactionDF  = rdd.toDF("transaction")
+          val kinesisTransactionDF = rdd.toDF("transaction")
             .withColumn(kinesisTransactionStructureName, // nested structure with our json
               from_json($"transaction", kinesisTransactionSchema)) //From binary to JSON object
             .select("transaction.*")
@@ -85,35 +88,36 @@ object TransactionConsumerDstreamToDynamoDBHadoopDataSet {
           kinesisTransactionDF.createOrReplaceTempView("DynamoDBTempTable")
 
           val dynamoDBDF = spark.sql("select concat(cast(cc_num as string),':',cast(monotonically_increasing_id() as string)) as cc_num_and_trans_time ,* from DynamoDBTempTable")
-          val schema_ddb = dynamoDBDF.dtypes
 
-          dynamoDBDF.show(false)
+          var ddbInsertFormattedRDD = dynamoDBDF.map(a => {
+          var ddbMap = new HashMap[String, AttributeValue]()
 
-          var ddbInsertFormattedRDD = dynamoDBDF.rdd.map(a => {
-            val ddbMap = new HashMap[String, AttributeValue]()
+          var cc_num_and_trans_time = new AttributeValue()
+          cc_num_and_trans_time.setS(a.get(0).toString)
+          ddbMap.put("cc_num_and_trans_time", cc_num_and_trans_time)
 
-            for (i <- 0 to schema_ddb.length - 1) {
-              val value = a.get(i)
-              if (value != null) {
-                val att = new AttributeValue()
-                att.setS(value.toString)
-                ddbMap.put(schema_ddb(i)._1, att)
+          var cc_num = new AttributeValue()
+          cc_num.setS(a.get(1).toString)
+          ddbMap.put("cc_num", cc_num)
 
-                println(schema_ddb(i)._1, att)
-              }
-            }
+          var first = new AttributeValue()
+          first.setS(a.get(2).toString)
+          ddbMap.put("cc_num", first)
 
-            val item = new DynamoDBItemWritable()
-            item.setItem(ddbMap)
-            println("Item")
-            println(item)
-            val r = scala.util.Random
+          var last = new AttributeValue()
+          last.setS(a.get(3).toString)
+          ddbMap.put("cc_num", last)
 
-            (new Text(r.nextInt.toString), item)
+          var trans_num = new AttributeValue()
+          trans_num.setS(a.get(4).toString)
+          ddbMap.put("cc_num", trans_num)
 
+          var item = new DynamoDBItemWritable()
+          item.setItem(ddbMap)
+
+          (new Text(""), item)
           }
           )
-
           ddbInsertFormattedRDD.saveAsHadoopDataset(ddbConf)
 
         }
@@ -123,8 +127,6 @@ object TransactionConsumerDstreamToDynamoDBHadoopDataSet {
     ssc.start()
     ssc.awaitTermination()
 
-
-
   }
-
 }
+
