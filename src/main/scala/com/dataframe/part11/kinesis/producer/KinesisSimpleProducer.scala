@@ -6,10 +6,6 @@ package com.dataframe.part11.kinesis.producer
 
 import com.amazonaws.services.kinesis.AmazonKinesisClient
 import com.amazonaws.services.kinesis.model.PutRecordRequest
-import org.apache.spark.SparkConf
-import org.apache.spark.internal.Logging
-import org.apache.spark.storage.StorageLevel
-import org.apache.spark.streaming.{Milliseconds, StreamingContext}
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain
 import scala.util.Random
 import java.nio.ByteBuffer

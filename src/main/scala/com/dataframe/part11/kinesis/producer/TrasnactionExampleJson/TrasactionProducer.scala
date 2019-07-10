@@ -8,7 +8,6 @@ import java.nio.ByteBuffer
 import java.nio.charset.Charset
 import java.text.SimpleDateFormat
 import java.util.{Date, Random, TimeZone}
-
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain
 import com.amazonaws.services.kinesis.AmazonKinesisClient
 import com.amazonaws.services.kinesis.model.PutRecordRequest
@@ -30,7 +29,6 @@ object TrasactionProducer {
     val fileName = args(0)
 
 
-    publishJsonMsg(fileName, endpoint, 10, stream)
 
   }
 

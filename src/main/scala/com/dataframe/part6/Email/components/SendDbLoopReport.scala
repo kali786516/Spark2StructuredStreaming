@@ -23,14 +23,17 @@ class SendDbEmailAndResultsReport extends OutputComponent {
       val oneRowData                    = null
       var line:String                   = null
       val columnHeaders                 = null
-      /*loop through lines*/ while ( {
+      /*loop through lines*/
+      while ( {
         (line                           = bufReader.readLine) != null
-      }) {
+      })
+      {
         counter                         = counter + 1
         if (counter > 1)
         {
           val oneRowArray               = line.split("\\~")
-          if (oneRowArray(0).isEmpty) System.out.println("Bad Record Line")
+          if (oneRowArray(0).isEmpty)
+            System.out.println("Bad Record Line")
 
           else
           {
