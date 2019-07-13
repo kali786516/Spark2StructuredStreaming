@@ -54,14 +54,14 @@ object TransactionConsumerSparkDNDB {
     val ssc = new StreamingContext("local[*]", "KinesisExampleHadoopExample", Seconds(1))
 
     val kinesisStream = KinesisUtils.createStream(
-      ssc, args(0), args(1), "kinesis.us-east-1.amazonaws.com",
+      ssc,"creditcardtransaction", "credittransaction", "kinesis.us-east-1.amazonaws.com",
       "us-east-1", InitialPositionInStream.LATEST, Duration(2000), StorageLevel.MEMORY_AND_DISK_2)
 
     val lines = kinesisStream.map(x => new String(x))
 
     val dynamodDBClinet = AmazonDynamoDBClientBuilder.standard().withRegion("us-east-1").build
     val dynamoDBCon = new DynamoDB(dynamodDBClinet)
-    val dynamoDBTable:String = dynamoDBCon.getTable(args(2)).getTableName
+    val dynamoDBTable:String = dynamoDBCon.getTable("credittransactiontable").getTableName
 
     val conf = new SparkConf()
       .setAppName("Sample")

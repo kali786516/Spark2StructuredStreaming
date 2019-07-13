@@ -514,5 +514,10 @@
     <orderEntry type="library" name="Maven: com.amazon.emr:emr-dynamodb-hadoop:4.5.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.1" level="project" />
     <orderEntry type="library" name="Maven: com.audienceproject:spark-dynamodb_2.11:0.4.3" level="project" />
+    <orderEntry type="library" name="Maven: com.cloudera.impala.jdbc:ImpalaJDBC41:2.5.36" level="project" />
+    <orderEntry type="library" name="Maven: com.cloudera.impala.jdbc:hive_metastore:2.5.36" level="project" />
+    <orderEntry type="library" name="Maven: com.cloudera.impala.jdbc:hive_service:2.5.36" level="project" />
+    <orderEntry type="library" name="Maven: com.cloudera.impala.jdbc:ql:2.5.36" level="project" />
+    <orderEntry type="library" name="Maven: com.cloudera.impala.jdbc:TCLIServiceClient:2.5.36" level="project" />
   </component>
 </module>

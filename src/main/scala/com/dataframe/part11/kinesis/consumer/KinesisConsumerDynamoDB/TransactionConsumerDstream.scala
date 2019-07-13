@@ -84,10 +84,9 @@ object TransactionConsumerDstreamToDynamoDB {
 
           val dynamoDBDF = spark.sql("select concat(cast(cc_num as string),':',cast(trans_time as string)) as cc_num_and_trans_time ,* from DynamoDBTempTable")
 
-          val schema_ddb = dynamoDBDF.dtypes
+          //val schema_ddb = dynamoDBDF.dtypes
 
           val dyJson     = dynamoDBDF.toJSON.collect()
-
 
           dynamoDBDF.show(false)
 

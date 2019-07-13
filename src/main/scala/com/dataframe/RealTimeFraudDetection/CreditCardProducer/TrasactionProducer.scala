@@ -26,8 +26,6 @@ object TrasactionProducer {
     props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, applicationConf.getString("kafka.bootstrap.servers"))
     props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, applicationConf.getString("kafka.key.serializer"))
     props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, applicationConf.getString("kafka.value.serializer"))
-    props.put(ProducerConfig.ACKS_CONFIG, applicationConf.getString("kafka.acks"))
-    props.put(ProducerConfig.RETRIES_CONFIG, applicationConf.getString("kafka.retries"))
     topic = applicationConf.getString("kafka.topic")
 
   }
@@ -89,7 +87,8 @@ object TrasactionProducer {
       //val producerRecord = new ProducerRecord[String, String](topic, 1, json.hashCode.toString, json)  //Specific Partition
       //producer.send(producerRecord) //Fire and Forget
       //producer.send(producerRecord).get() /*Synchronous Producer */
-      producer.send(producerRecord, new MyProducerCallback) /*Asynchrounous Produer */
+      /*Asynchrounous Produer */
+      producer.send(producerRecord, new MyProducerCallback)
       Thread.sleep(rand.nextInt(3000 - 1000) + 1000)
     }
 

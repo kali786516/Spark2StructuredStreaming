@@ -101,7 +101,7 @@ object DstreamFraudDetection extends SparkJob("Feaud Detection using Dstream"){
           .withColumn("trans_time", lit($"trans_time") cast (TimestampType))
 
 
-        val distanceUdf            = udf(com.dataframe.RealTimeFraudDetection.fraudDetection.utils.Utils.getDistance _)
+        val distanceUdf     = udf(com.dataframe.RealTimeFraudDetection.fraudDetection.utils.Utils.getDistance _)
 
         sparkSession.sqlContext.sql("SET spark.sql.autoBroadcastJoinThreshold = 52428800")
         val processedTransactionDF = kafkaTransactionDF.join(broadcast(customerAgeDF), Seq("cc_num"))
