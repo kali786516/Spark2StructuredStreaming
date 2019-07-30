@@ -1,4 +1,4 @@
-package com.dataframe.part12.kafkaSqlServer.producer
+package com.dataframe.part12.kafka.producer
 
 /**
   * Created by kalit_000 on 6/13/19.

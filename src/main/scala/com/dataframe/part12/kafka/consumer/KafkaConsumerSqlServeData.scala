@@ -1,4 +1,4 @@
-package com.dataframe.part12.kafkaSqlServer.consumer
+package com.dataframe.part12.kafka.consumer
 
 /**
   * Created by kalit_000 on 6/13/19.
