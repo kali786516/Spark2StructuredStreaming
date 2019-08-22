@@ -2,7 +2,7 @@ package com.dataframe.part18.FixMessageAnalytics.kafka.producer
 
 import java.util.Properties
 
-import com.dataframe.RealTimeFraudDetection.CreditCardProducer.TrasactionProducer.{applicationConf, props, topic}
+import com.dataframe.part21.RealTimeFraudDetection.CreditCardProducer.TrasactionProducer.{applicationConf, props, topic}
 import com.typesafe.config.Config
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
 import com.google.common.collect.Sets

@@ -1,5 +1,6 @@
 package fileSearcher
 
+import com.dataframe.part5.JustinPihonyFileSearchPRoject.Matcher
 import org.junit.runner.RunWith
 import org.scalatest.FlatSpec
 import org.scalatest.junit.JUnitRunner

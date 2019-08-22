@@ -2,8 +2,8 @@ package com.dataframe.part18.FixMessageAnalytics.kafka.consumer.dstream
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder
 import com.amazonaws.services.dynamodbv2.document.{DynamoDB, Item}
-import com.dataframe.RealTimeFraudDetection.fraudDetection.kafka.KafkaConfig
-import com.dataframe.RealTimeFraudDetection.fraudDetection.spark.jobs.realTimeFraudDetection.DstreamFraudDetection.getClass
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.kafka.KafkaConfig
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.spark.jobs.realTimeFraudDetection.DstreamFraudDetection.getClass
 import kafka.serializer.StringDecoder
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.log4j.Logger

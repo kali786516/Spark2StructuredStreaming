@@ -5,13 +5,14 @@ package fileSearcher
   */
 
 import javax.tools.FileObject
-
 import org.scalatest._
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
 import org.scalatest._
 import com.dataframe.part5._
 import java.io.File
+
+import com.dataframe.part5.JustinPihonyFileSearchPRoject.{DirectoryObject, FileObject2, FilterChecker}
 
 @RunWith(classOf[JUnitRunner])
 class FilterCheckerTests extends FlatSpec {

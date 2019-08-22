@@ -1,11 +1,16 @@
 package com.dataframe.part12.kafka.consumer
 
-import com.dataframe.RealTimeFraudDetection.fraudDetection.cassandra.{CassandraConfig, CassandraDriver}
-import com.dataframe.RealTimeFraudDetection.fraudDetection.config.Config
-import com.dataframe.RealTimeFraudDetection.fraudDetection.kafka.KafkaSource
-import com.dataframe.RealTimeFraudDetection.fraudDetection.spark.jobs.SparkJob
-import com.dataframe.RealTimeFraudDetection.fraudDetection.spark.{DataReader, GracefulShutdown, SparkConfig}
-import com.dataframe.RealTimeFraudDetection.fraudDetection.utils.Utils
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.cassandra.{CassandraConfig, CassandraDriver}
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.config.Config
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.kafka.KafkaSource
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.spark.{DataReader, GracefulShutdown, SparkConfig}
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.utils.Utils
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.cassandra.CassandraConfig
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.config.Config
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.kafka.KafkaSource
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.spark.DataReader
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.spark.jobs.SparkJob
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.utils.Utils
 import org.apache.log4j.Logger
 import org.apache.spark.ml.PipelineModel
 import org.apache.spark.ml.classification.RandomForestClassificationModel

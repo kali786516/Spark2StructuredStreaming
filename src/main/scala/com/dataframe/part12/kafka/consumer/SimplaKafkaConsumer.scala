@@ -2,8 +2,8 @@ package com.dataframe.part12.kafka.consumer
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder
 import com.amazonaws.services.dynamodbv2.document.{DynamoDB, Item}
-import com.dataframe.RealTimeFraudDetection.fraudDetection.creditcard.Schema
 import com.dataframe.part18.FixMessageAnalytics.kafka.consumer.dstream.FixMessageKafkaConsumer.{getClass, parseFixEvent, schema}
+import com.dataframe.part21.RealTimeFraudDetection.fraudDetection.creditcard.Schema
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.log4j.Logger
 import org.apache.spark.SparkConf

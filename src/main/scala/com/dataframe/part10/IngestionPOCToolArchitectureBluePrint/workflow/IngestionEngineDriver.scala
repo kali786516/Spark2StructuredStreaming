@@ -6,7 +6,7 @@ import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.utils.
 import org.apache.commons.cli
 import org.apache.commons.cli.{Option, Options}
 import com.dataframe.part10.IngestionPOCToolArchitectureBluePrint.commons.exception._
-import com.dataframe.part6.Email.commons.exception.CommandLineArgumentException
+import com.dataframe.part6.EmailApplicationArchitectureExample.commons.exception.CommandLineArgumentException
 
 /**
   * Created by kalit_000 on 6/8/19.
