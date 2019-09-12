@@ -1,0 +1,20 @@
+version: 0.2
+
+run-as: Linux-user-name
+
+phases:
+  install:
+    commands:
+      - cd python-example && pip install -r requirments.txt
+      - pip install pycodestyle
+  build:
+    commands:
+      - pycodestyle -v src/*.py
+      - echo "pycodestyle foun no issues!"
+      - python -m pytest
+artifacts:
+  files:
+    - src/*
+  discard-path: yes
+  base-directory: python-example
+  name: python-app-$(date +%y-%m-%d-%H-%M-%S).zip

@@ -1,0 +1,23 @@
+version: 0.2
+
+run-as: Linux-user-name
+
+phases:
+  install:
+    commands:
+      - echo nothing to do in the install phase...
+  pre_build:
+    commands:
+      - cd java-example
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn install
+  post_build:
+    commands:
+      - echo build completed on `date`
+artifacts:
+  files:
+cache:
+  paths:
+    - '/root/.m2/**/*'
