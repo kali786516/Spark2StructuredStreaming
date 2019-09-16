@@ -69,13 +69,13 @@ object TopNPhrases {
     val distinct_tweets=hiveCtx.sql(" select distinct(text) from tweets_table where text <> ''")
     val distinct_tweets_op=distinct_tweets.collect()
     val distinct_tweets_list=sc.parallelize(List(distinct_tweets_op))
-    val distinct_tweets_string=distinct_tweets.map(x=>x.toString)
+    //val distinct_tweets_string=distinct_tweets.map(x=>x.toString)
 
-    val distinct_tweets_string_op=distinct_tweets_string.flatMap(line =>line.split(" ")).map(word => word)
+    //val distinct_tweets_string_op=distinct_tweets_string.flatMap(line =>line.split(" ")).map(word => word)
 
     //case class tweetphraseclass(text: String)
 
-    val distinct_tweets_string_op_two=distinct_tweets_string_op.map(_.split(" ")).map(p => tweetphraseclass(p(0)))
+    //val distinct_tweets_string_op_two=distinct_tweets_string_op.map(_.split(" ")).map(p => tweetphraseclass(p(0)))
 
     //distinct_tweets_string_op_two.registertemptable("tweetphrasetable")
     hiveCtx.sql("select * from tweetphrasetable limit 100").collect().foreach(println)

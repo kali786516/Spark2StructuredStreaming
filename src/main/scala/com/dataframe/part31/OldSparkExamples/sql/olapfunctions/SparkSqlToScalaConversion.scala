@@ -11,7 +11,7 @@ import org.apache.spark.{SparkContext, SparkConf}
 import org.joda.time.{DateTime, Days}
 import java.text.SimpleDateFormat
 import java.util.Date
-import com.databricks.spark.xml
+//import com.databricks.spark.xml
 
 object SparkSqlToScalaConversion {
 

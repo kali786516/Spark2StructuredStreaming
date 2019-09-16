@@ -23,10 +23,11 @@ object SparkDBMPPExtractor {
     val conf = new SparkConf().setMaster("local[*]").setAppName("SparkDBExtractorMPP").set("spark.hadoop.validateOutputSpecs", "false")
     val sc = new SparkContext(conf)
 
+    /*
     def opfile(value:DataFrame,delimeter:String):RDD[String]=
     {
       value.map(x => x.toString.replace("[","").replace("]","").replace(",",delimeter))
-    }
+    }*/
 
     //read the application context file
     val ctx = new ClassPathXmlApplicationContext("sparkDBExtractorMpp.xml")
@@ -65,7 +66,7 @@ object SparkDBMPPExtractor {
       val df = sqlContext.read.jdbc(url,table,parallelizecolumn,lowerbound,upperbound,numberofpartitions,props)
       df.show(10)
 
-      opfile(df,opdelimeter).saveAsTextFile("C:\\Users\\kalit_000\\Desktop\\typesafe\\scaladbop\\op.txt")
+      //opfile(df,opdelimeter).saveAsTextFile("C:\\Users\\kalit_000\\Desktop\\typesafe\\scaladbop\\op.txt")
 
     } catch {
       case e: Exception => e.printStackTrace

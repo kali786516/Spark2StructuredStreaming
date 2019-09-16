@@ -1,0 +1,35 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Mappings" : {
+    "RegionMap" : {
+      "us-east-1" : { "AMI" :  "ami-13232" },
+      "us-west-1" : { "AMI" :  "ami-3232" },
+      "eu-west-1" : { "AMI" :  "ami-3233" },
+      "ap-northeast-1" : { "AMI" :  "ami-23223" },
+      "ap-southeast-1" : { "AMI" :  "ami-3233" }
+    }
+  },
+  "Resources": {
+    "Ec2Instance" : {
+      "Type" : "AWS::EC2::Instance",
+      "Properties" : {
+        "ImageId" : {
+          "Fn:FindInMap" : [ "RegionMap", { "Ref" :  "AWS::Region" }, "AMI" ]
+        }
+      },
+      "DependsOn" : "myDB"
+    },
+    "myDB" : {
+      "Type" : "AWS::RDS::DBInstance",
+      "Properties" : {
+        "AllocatedStorage" : "5",
+        "DBInstanceClass" : "db.m1.small",
+        "Engine" : "MYSQL",
+        "EngineVersion" : "5.5",
+        "MasterUsername" : "MyName",
+        "MasterUserPassword" : "MyPassword"
+      }
+    }
+
+  }
+}

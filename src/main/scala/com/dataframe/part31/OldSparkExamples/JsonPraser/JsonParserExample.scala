@@ -31,7 +31,7 @@ object JsonParserExample {
 
     ddl.rdd.saveAsTextFile("C:\\Users\\kjfg254\\Desktop\\AZ_Projects\\veeva\\json_poc\\file")
 
-    test2.foreach(println)
+    //test2.foreach(println)
     sc.stop()
 
   }

@@ -19,7 +19,7 @@ import org.apache.spark.streaming.StreamingContext._
 import org.apache.spark.streaming.kafka.KafkaUtils
 import com.datastax.spark.connector._
 import org.apache.spark.streaming.kafka._
-import org.apache.spark.streaming.flume._
+//import org.apache.spark.streaming.flume._
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark.util.IntParam
 

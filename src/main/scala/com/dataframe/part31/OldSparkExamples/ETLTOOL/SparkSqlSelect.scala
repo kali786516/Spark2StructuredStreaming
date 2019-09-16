@@ -22,10 +22,10 @@ object SparkSqlSelect {
     val conf = new SparkConf().setMaster("local[*]").setAppName("SparkSqlConfigurable").set("spark.hadoop.validateOutputSpecs", "false")
     val sc = new SparkContext(conf)
 
-    def opfile(value:DataFrame,delimeter:String):RDD[String]=
-    {
-      value.map(x => x.toString.replace("[","").replace("]","").replace(",",delimeter))
-    }
+    //def opfile(value:DataFrame,delimeter:String):RDD[String]=
+    //{
+      //value.map(x => x.toString.replace("[","").replace("]","").replace(",",delimeter))
+    //}
 
 
     //read the application context file
@@ -55,7 +55,7 @@ object SparkSqlSelect {
       df.registerTempTable(table)
       val OP=sqlContext.sql(query)
 
-      opfile(OP,opdelimeter).saveAsTextFile("C:\\Users\\kalit_000\\Desktop\\typesafe\\scaladbop\\op.txt")
+      //opfile(OP,opdelimeter).saveAsTextFile("C:\\Users\\kalit_000\\Desktop\\typesafe\\scaladbop\\op.txt")
 
     } catch {
       case e: Exception => e.printStackTrace

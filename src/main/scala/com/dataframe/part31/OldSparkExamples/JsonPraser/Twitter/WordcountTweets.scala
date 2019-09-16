@@ -60,9 +60,9 @@ object WordcountTweets {
     val distinct_tweets=hiveCtx.sql(" select distinct(text) from tweets_table where text <> ''")
     val distinct_tweets_op=distinct_tweets.collect()
     val distinct_tweets_list=sc.parallelize(List(distinct_tweets_op))
-    val distinct_tweets_string=distinct_tweets.map(x=>x.toString)
+    //val distinct_tweets_string=distinct_tweets.map(x=>x.toString)
 
-    val csvop=distinct_tweets_string.flatMap(line =>line.split(" ")).map(word => (word,1)).reduceByKey(_+_).sortBy {case (key,value) => -value}.map { case (key,value) => Array(key,value).mkString(",") }
+    //val csvop=distinct_tweets_string.flatMap(line =>line.split(" ")).map(word => (word,1)).reduceByKey(_+_).sortBy {case (key,value) => -value}.map { case (key,value) => Array(key,value).mkString(",") }
     //csvop.collect().foreach(println)
 
     def merge(srcPath: String, dstPath: String): Unit =  {
