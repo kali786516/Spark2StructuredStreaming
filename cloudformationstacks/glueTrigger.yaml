@@ -1,0 +1,9 @@
+ScheduledJobTrigger:
+  Type: 'AWS::Glue::Trigger'
+  Properties:
+    Type: SCHEDULED
+    Description: Scheduled trigger for Glue job, it's just a cron expression (every hour).
+    Schedule: cron(0 */1 * * ? *)
+    Actions:
+      - JobName: OrcConverter
+    Name: OrcConverterScheduler

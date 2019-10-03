@@ -1,4 +1,4 @@
-���Parameters:
+Parameters:
   InstanceType:
     Type: String
     Default: t3.small

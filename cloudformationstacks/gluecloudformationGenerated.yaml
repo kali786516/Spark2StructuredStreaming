@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Metadata:
+  Generator: "console-recorder"
+Description: ""
+Resources:
+  gluefb506ff:
+    Type: "AWS::Glue::Job"
+    Properties:
+      ExecutionProperty:
+        maxConcurrentRuns: 1
+      Command:
+        name: "glueetl"
+        scriptLocation: "s3://aws-glue-script-location-786/CrossAccountGlueJob.scala"
+      MaxRetries: 0
+      Name: "CrossAccountGlueJob2"
+      Role: "arn:aws:iam::341406773939:role/service-role/AWSGlueServiceRole-glueexecution786"
+      DefaultArguments:
+        --job-bookmark-option: "job-bookmark-disable"
+        --TempDir: "s3://aws-glue-temporary-341406773939-us-east-1/kali7865164"
+        --job-language: "scala"
+        --class: "CrossAccountGlueJob"
+

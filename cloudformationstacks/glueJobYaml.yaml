@@ -1,0 +1,28 @@
+Type: 'AWS::Glue::Job'
+  DependsOn:
+    - GlueRole
+  Properties:
+    Name: OrcConverter
+    Role:
+      Ref: GlueRole
+    MaxRetries: 0   #Since it runs every hour it will rerun anyway the folders failed
+    Description: Convert csv files to ORC
+    Command:
+      # Don't change this name or it won't work!
+      Name: 'glueetl'
+      ScriptLocation:
+        Fn::Join:
+          - '/'
+          - - 's3:/'
+            - {'Fn::If' : ['UseBatsKey', 'BATS::SAM::CodeS3Bucket', {'Fn::Select': ["5",{ 'Fn::Split' : [ ":", {'Fn::ImportValue' : 'DeploymentBucket'} ] }]}]}
+            - BATS::SAM::AdditionalArtifactsS3Path
+            - com/amazon/netflow/catalog
+            - OrcConverter.scala
+    AllocatedCapacity: 6
+    ExecutionProperty:
+      MaxConcurrentRuns: 10
+    DefaultArguments:
+      '--enable-continuous-cloudwatch-log': 'true'
+      "--enable-metrics": ''
+      "--job-language": scala
+      "--class": com.amazon.netflow.catalog.OrcConverter

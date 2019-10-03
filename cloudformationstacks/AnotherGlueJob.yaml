@@ -1,0 +1,237 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: 'AWS CloudFormation Glue Job : This template demonstrates the creation of a Glue Etl Job.'
+Transform:
+Name: tCommonTags
+Parameters:
+  'ApplicationName' : 'datalake'
+  'PointOfContact' : 'michael.dane@homesite.com'
+  'CostCenter' : '1301'
+Metadata:
+  License: HomeSite
+  AWS::CloudFormation::Interface:
+    ParameterGroups:
+      - Label:
+          default: Parent Stacks
+        Parameters:
+          - pParentServiceIAMRoleStack
+      - Label:
+          default: DynamoDB Parameters
+        Parameters:
+          - pGlueJobName
+          - pGlueJobType
+          - pGlueJobPyVersionPythonShell
+          - pGlueVersionEtl
+          - pAllocatedCapacityEtl
+          - pMaxCapacity
+          - pNumberOfWorkers
+          - pWorkerType
+          - pGlueJobMaxRetries
+          - pConnection
+Parameters:
+  pParentServiceIAMRoleStack:
+    Description: hs-infra-srv Service Role Stack Name
+    Type: String
+    Default: ''
+  pGlueJobName:
+    Description: Optional name of Glue Job.
+    Type: String
+    Default: ''
+  pGlueJobType:
+    Description: Select glueetl for Apache Spark or pythonshell for Python Shell
+    Type: String
+    Default: glueetl
+    AllowedValues:
+      - glueetl
+      - pythonshell
+  pGlueVersionEtl:
+    Type: String
+    Description: Glue version determines the versions of Apache Spark and Python that
+      AWS Glue supports. The Python version indicates the version supported for jobs
+      of type Spark.
+    Default: '0.9'
+    AllowedValues:
+      - 0.9
+      - 1.0
+
+  pGlueJobPyVersionPythonShell:
+
+    Type: String
+
+    Description: The Python version being used to execute a Python shell job. Allowed
+
+      values are 2 or 3.
+
+    Default: ''
+
+  pGlueJobMaxRetries:
+
+    Description: Optional maximum retries of the Glue Job.
+
+    Type: Number
+
+    Default: 0
+
+  pAllocatedCapacityEtl:
+
+    Description: Optional the number of capacity units that are allocated to this
+
+      job.Only for Apache Spark
+
+    Type: Number
+
+    Default: 2
+
+    MinValue: 2
+
+  pMaxCapacity:
+
+    Description: >-
+
+      Optional Maximum Capacity allocated to the Glue Python Job or Apache
+
+       Spark Etl Job. For Pythonshell allowed values are 0.0625 or 1 and Default
+
+      is 0.0625. For Apache Spark ETL job user can allocate from 2 to 100 DPUs
+
+    Type: String
+
+    Default: ''
+
+  pNumberOfWorkers:
+
+    Description: >-
+
+      Optional The number of workers of a defined workerType that are
+
+      allocated when a job runs.\n The maximum number of workers you can define
+
+      are 299 for G.1X, and 149 for G.2X
+
+    Type: String
+
+  pWorkerType:
+
+    Description: >-
+
+      Optional The type of predefined worker that is allocated when
+
+      a job runs. Accepts a value of Standard, G.1X, or G.2X
+
+    Type: String
+
+  pConnection:
+
+    Description: >-
+
+      JDBC COnnections for ETL
+
+    Type: String
+
+
+
+Conditions:
+
+  cHasServiceIAMRole: !Not [!Equals [!Ref pParentServiceIAMRoleStack, '']]
+
+  cHasGlueJobType: !Not [!Equals [!Ref pGlueJobType, '']]
+
+  cIsGlueEtl: !Equals [!Ref pGlueJobType, 'glueetl']
+
+  cIsPythonShell: !Equals [!Ref pGlueJobType, 'pythonshell']
+
+  cHasMaxCapacity: !Not [!Equals [!Ref pMaxCapacity, '']]
+
+  cHasConnection: !Not [!Equals [!Ref pConnection, '']]
+
+  cHasNumberOfWorkers: !Not [!Equals [!Ref pNumberOfWorkers, '']]
+
+  cHasWorkerType: !Not [!Equals [!Ref pWorkerType, '']]
+
+  cHasAllocatedCapacity: !And
+
+    - !Condition cIsGlueEtl
+
+    - !Not [!Equals [!Ref pAllocatedCapacityEtl, '']]
+
+
+
+Resources:
+
+  rGlueJob:
+
+    Type: AWS::Glue::Job
+
+    Properties:
+
+      Name: !Ref pGlueJobName
+
+      Role: !If [ cHasServiceIAMRole, {'Fn::ImportValue': !Sub '${pParentServiceIAMRoleStack}-oRoleArn'}, !Ref 'AWS::NoValue' ]
+
+      Command:
+
+        Name: !If [ cHasGlueJobType,  !Ref pGlueJobType , !Ref 'AWS::NoValue' ]
+
+        PythonVersion: !If [ cHasGlueJobType,  !Ref pGlueJobPyVersionPythonShell , !Ref 'AWS::NoValue' ]
+
+        ScriptLocation: pScriptLocation
+
+      Connections:
+
+        !If
+
+        - cHasConnection
+
+        - Connections:
+
+            - !Ref pConnection
+
+        - !Ref 'AWS::NoValue'
+
+      AllocatedCapacity: !If [ cHasAllocatedCapacity,  !Ref pAllocatedCapacityEtl , !Ref 'AWS::NoValue' ]
+
+      GlueVersion: !If [ cIsGlueEtl,  !Ref pGlueVersionEtl , !Ref 'AWS::NoValue' ]
+
+      MaxRetries: !Ref pGlueJobMaxRetries
+
+      MaxCapacity: !If [ cHasMaxCapacity,  !Ref pMaxCapacity , !Ref 'AWS::NoValue' ]
+
+      NumberOfWorkers: !If [ cHasNumberOfWorkers,  !Ref pNumberOfWorkers , !Ref 'AWS::NoValue' ]
+
+      WorkerType: !If [ cHasWorkerType,  !Ref pWorkerType , !Ref 'AWS::NoValue' ]
+
+
+
+  SsmOutputGlueJobName:
+
+    Type: "AWS::SSM::Parameter"
+
+    Properties:
+
+      Name: !Sub "/hs/${AWS::StackName}-oGlueJobName"
+
+      Type: "String"
+
+      Value: !Ref rGlueJob
+
+
+
+Outputs:
+
+  oTemplateID:
+
+    Description: Template id.
+
+    Value: GlueJob
+
+  oStackName:
+
+    Description: Stack name.
+
+    Value: !Sub ${AWS::StackName}
+
+  oGlueJobName:
+
+    Description: The Glue Job Name
+
+    Value: !Ref rGlueJob
