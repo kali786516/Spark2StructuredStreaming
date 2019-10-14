@@ -68,11 +68,11 @@ public class TextToParquetWithAvroString extends Configured implements Tool  {
         job.setJarByClass(getClass());
 
         /*
-        job.getConfiguration().set("fs.s3n.awsAccessKeyId", "AKIAI3MXSYQPHPD25ZUA");
-        job.getConfiguration().set("fs.s3n.awsSecretAccessKey","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");
-        job.getConfiguration().set("fs.defaultFS","s3n://az-enterprise-data-hub-us");
-        job.getConfiguration().set("fs.s3a.proxy.host","usprivatezen.astrazeneca.net");
-        job.getConfiguration().set("fs.s3a.proxy.port","9480");
+        job.getConfiguration().set("fs.s3n.awsAccessKeyId", "");
+        job.getConfiguration().set("fs.s3n.awsSecretAccessKey","");
+        job.getConfiguration().set("fs.defaultFS","");
+        job.getConfiguration().set("fs.s3a.proxy.host","");
+        job.getConfiguration().set("fs.s3a.proxy.port","");
         job.getConfiguration().set("fs.s3n.impl","org.apache.hadoop.fs.s3native.NativeS3FileSystem");
          */
 
