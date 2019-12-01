@@ -23,7 +23,7 @@ export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
 export IPYTHON=1
 export PYSPARK_PYTHON=/usr/local/bin/python3
 export PYSPARK_DRIVER_PYTHON=ipython3
-python3 /Users/kalit_000/PycharmProjects/FlaskProject/FlaskMLModelApi.py
+python3 /Users/kalit_000/Downloads/gitCode/Spark2StructuredStreaming/FlaskPythonApiExamples/FlaskMLModelApi.py
 
 cp /Users/kalit_000/.m2/repository/ml/dmlc/xgboost4j/0.80/xgboost4j-0.80.jar /Users/kalit_000/PycharmProjects/FlaskProject/XGBoostWrappers/
 cp /Users/kalit_000/.m2/repository/ml/dmlc/xgboost4j-spark/0.80/xgboost4j-spark-0.80.jar /Users/kalit_000/PycharmProjects/FlaskProject/XGBoostWrappers/
@@ -43,10 +43,10 @@ spark = SparkSession.builder.master("local").appName("Spark Flask Api") \
 
 # The below two zip files are python wrappers that XGBoost4Spark depends on when running in Python.
 # Download URL: https://s3.amazonaws.com/qubole-preddy.us/xgb-py-dep/spark-xgb-wrapper.zip
-spark.sparkContext.addPyFile("file:///Users/kalit_000/PycharmProjects/FlaskProject/XGBoostWrappers/pyspark-xgb-wrapper.zip")
+spark.sparkContext.addPyFile("file:///Users/kalit_000/PycharmProjects/FlaskProject/MLModels/XGBoostWrappers/pyspark-xgb-wrapper.zip")
 #spark.sparkContext.addPyFile("https://s3.amazonaws.com/qubole-preddy.us/xgb-py-dep/spark-xgb-wrapper.zip")
 # Download URL: https://s3.amazonaws.com/qubole-preddy.us/xgb-py-dep/pyspark-xgb-wrapper.zip
-spark.sparkContext.addPyFile("file:///Users/kalit_000/PycharmProjects/FlaskProject/XGBoostWrappers/spark-xgb-wrapper.zip")
+spark.sparkContext.addPyFile("file:///Users/kalit_000/PycharmProjects/FlaskProject/MLModels/XGBoostWrappers/spark-xgb-wrapper.zip")
 
 #spark.sparkContext.addPyFile("https://s3.amazonaws.com/qubole-preddy.us/xgb-py-dep/pyspark-xgb-wrapper.zip")
 
@@ -99,7 +99,7 @@ def predict_churn():
     selected_trans_df = transformed_df.select("customer.*")
 
     pipelineModel = PipelineModel.load \
-        ("file:///Users/kalit_000/PycharmProjects/FlaskProject/XGBoostMLModel/telco_churn_xg.model_v1")
+        ("file:///Users/kalit_000/PycharmProjects/FlaskProject/MLModels/XGBoostMLModel/telco_churn_xg.model_v1")
 
     pipelineModelPredictions = pipelineModel.transform(selected_trans_df)
 

@@ -27,7 +27,7 @@ export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
 export IPYTHON=1
 export PYSPARK_PYTHON=/usr/local/bin/python3
 export PYSPARK_DRIVER_PYTHON=ipython3
-python3 /Users/kalit_000/PycharmProjects/FlaskProject/movieRecomendationApi.py
+python3 /Users/kalit_000/Downloads/gitCode/Spark2StructuredStreaming/FlaskPythonApiExamples/movieRecomendationApi.py
 
 http://localhost:5009/predict_churn?customer=IN|65|415|329-6603|no|no|0|129.1|137|21.95|228.5|83|19.42|208.8|111|9.4|12.7|6|3.43|4
 
@@ -71,7 +71,7 @@ def movie_prediction():
     selected_trans_df.show(10)
 
     pipelineModel = ALSModel.load \
-        ("file:///Users/kalit_000/PycharmProjects/FlaskProject/RecomendationMLModels/Recomendation.model_v1")
+        ("file:///Users/kalit_000/PycharmProjects/FlaskProject/MLModels/RecomendationMLModels/Recomendation.model_v1")
 
     pipelineModelPredictions = pipelineModel.transform(selected_trans_df)
 
