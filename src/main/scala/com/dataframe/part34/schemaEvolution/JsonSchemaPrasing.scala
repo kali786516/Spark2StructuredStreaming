@@ -1,23 +1,12 @@
-package com.dataframe.part36.arrayAndJsonDataExplode
+package com.dataframe.part34.schemaEvolution
 
-import org.apache.spark.sql._
-import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs._
-import org.apache.http.client.methods.HttpGet
-import org.apache.http.impl.client.DefaultHttpClient
-import org.apache.spark.sql.{DataFrame, SaveMode, SparkSession}
-import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.StructType
-import org.apache.log4j.{Level, Logger}
-import org.apache.spark.rdd.RDD
-import org.apache.spark.sql.types._
-import org.apache.spark.storage.StorageLevel
-import org.apache.spark.sql.functions.{explode, expr, posexplode, when}
+import org.apache.log4j.Logger
+import org.apache.spark.sql.SparkSession
 
-object SparkJsonParsing {
+object JsonSchemaPrasing {
   def main(args: Array[String]): Unit = {
 
-    val logger = Logger.getLogger("FlattenTest")
+        val logger = Logger.getLogger("FlattenTest")
     //Logger.getLogger("org").setLevel(Level.WARN)
     //Logger.getLogger("akka").setLevel(Level.WARN)
 
@@ -68,14 +57,19 @@ object SparkJsonParsing {
       "select * from cte_2"
     ).show()
 
-    spark.stop()
-
 
     val schemadf = spark.sql("desc JsonTable")
 
-
     schemadf.show(1000,false)
 
+   spark.sql("with cte as (select explode(sen) as senArray  from JsonTable) select senArray.columns.* from cte").registerTempTable("senArrayTable")
+
+    val schemadf2 = spark.sql("desc senArrayTable")
+
+    schemadf2.show(1000,false)
+
+
+    spark.stop()
 
 
   }
