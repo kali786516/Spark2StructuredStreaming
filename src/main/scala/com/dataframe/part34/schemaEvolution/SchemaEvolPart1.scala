@@ -55,20 +55,20 @@ object SchemaEvolPart1 {
     println(differenceColumns)
 
     for (cName <- differenceColumns) {
-      val cType = df3Columns(cName) match {
-        case IntegerType => "INTEGER"
-        case LongType => "BIGINT"
-        case DoubleType => "DOUBLE PRECISION"
-        case FloatType => "REAL"
-        case ShortType => "INTEGER"
-        case ByteType => "SMALLINT" // Redshift does not support the BYTE type.
-        case BooleanType => "BOOLEAN"
-        case StringType => s"VARCHAR(500)" // "TEXT"
-        case TimestampType => "TIMESTAMP"
-        case DateType => "DATE"
-        case t: DecimalType => s"DECIMAL(10,2)"
-        case _ => throw new IllegalArgumentException(s"Don't know how to save $cName to JDBC")
-      }
+        val cType = df3Columns(cName) match {
+          case IntegerType => "INTEGER"
+          case LongType => "BIGINT"
+          case DoubleType => "DOUBLE PRECISION"
+          case FloatType => "REAL"
+          case ShortType => "INTEGER"
+          case ByteType => "SMALLINT" // Redshift does not support the BYTE type.
+          case BooleanType => "BOOLEAN"
+          case StringType => s"VARCHAR(500)" // "TEXT"
+          case TimestampType => "TIMESTAMP"
+          case DateType => "DATE"
+          case t: DecimalType => s"DECIMAL(10,2)"
+          case _ => throw new IllegalArgumentException(s"Don't know how to save $cName to JDBC")
+        }
 
       //val schemaTable = s"${etlConfig.redshiftSchema}.${etlConfig.redshiftTable}"
 
