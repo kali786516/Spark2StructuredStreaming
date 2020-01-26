@@ -76,6 +76,20 @@ object SparkJsonParsing {
 
     schemadf.show(1000,false)
 
+    /*
+       |-- another_id: string (nullable = true)
+       |-- page_size: long (nullable = true)
+       |-- sen: array (nullable = true)
+       |    |-- element: struct (containsNull = true)
+       |    |    |-- columns: struct (nullable = true)
+       |    |    |    |-- blah: string (nullable = true)
+       |    |    |    |-- count: long (nullable = true)
+       |    |    |-- id: long (nullable = true)
+       |    |    |-- sentence: string (nullable = true)
+       |    |    |-- ses_id: long (nullable = true)
+       |-- total_count: long (nullable = true)
+    */
+
 
 
   }

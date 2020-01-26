@@ -1,7 +1,7 @@
 package com.dataframe.part36.arrayAndJsonDataExplode
 
 import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.functions.{explode, expr, posexplode, when}
+import org.apache.spark.sql.functions.{explode, expr, posexplode, when,explode_outer}
 import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.sql.types.{ArrayType, MapType, StringType, StructType}
 
