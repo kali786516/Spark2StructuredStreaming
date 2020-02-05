@@ -131,12 +131,19 @@ object sparkJsonFlatten {
     }
 
 
-    val flattendedJSON = flattenDataframe(gitHubDF)
+    //val flattendedJSON = flattenDataframe(gitHubDF)
     //schema of the JSON after Flattening
     //flattendedJSON.schema
 
     //Output DataFrame After Flattening
     //flattendedJSON.show(false)
+
+
+    var df1:DataFrame = null
+
+    for (a <- 0 to 3){
+      df1 = flattenDataframe(gitHubDF)
+    }
 
     spark.stop()
 

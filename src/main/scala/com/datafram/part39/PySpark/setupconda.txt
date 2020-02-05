@@ -1,0 +1,27 @@
+
+#setupConda
+
+export CONDA_ENVS_PATH=/opt/projects/shared/$user/.conda/envs
+export CONDA_PKGS_DIRS=/opt/projects/shared/$user/.conda/pkgs
+
+
+#Create Conda Env
+conda create -n your_env python=2.8
+
+source activate your_env_name
+
+condata install xxyz
+
+
+source activate mycondaenv
+
+conda install -C conda-forge pyarrow
+
+
+conda env list
+
+PySpark Conda Setup:-
+export PYSPARK_PYTHON=/myconda/env/folder
+
+
+
