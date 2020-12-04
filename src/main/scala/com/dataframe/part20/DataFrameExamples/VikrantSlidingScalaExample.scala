@@ -55,7 +55,8 @@ object VikrantSlidingScalaExample {
 
     val op=noheaders.map(x => x._1.split("\\~"))
       .map(x => (x(0),x(1),x(2)))
-      .map{case (accountnumber,datevalue,amount) => ((accountnumber.toString+"-"+datevalue.substring(0,8)),(datevalue.substring(7,8).toDouble,amount.toDouble))}
+      .map{case (accountnumber,datevalue,amount) =>
+      ((accountnumber.toString+"-"+datevalue.substring(0,8)),(datevalue.substring(7,8).toDouble,amount.toDouble))}
       .reduceByKey((x,y) => ((((math.max(x._1,y._1)- math.min(x._1,y._1))),(x._2+y._2))))
 
      */

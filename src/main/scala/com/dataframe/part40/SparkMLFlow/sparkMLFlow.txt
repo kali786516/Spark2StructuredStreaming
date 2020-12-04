@@ -1,0 +1,98 @@
+//https://towardsdatascience.com/empowering-spark-with-mlflow-58e6eb5d85e8
+
+import org.apache.spark.sql.functions.col
+import org.apache.spark.sql.types.StructType
+import org.apache.spark.sql.{Column, DataFrame}
+import scala.util.matching.Regex
+
+val FirstAtRe: Regex = "^_".r
+val AliasRe: Regex = "[\\s_.:@]+".r
+
+def getFieldAlias(field_name: String): String = {
+    FirstAtRe.replaceAllIn(AliasRe.replaceAllIn(field_name, "_"), "")
+}
+
+def selectFieldsNormalized(columns: List[String])(df: DataFrame): DataFrame = {
+    val fieldsToSelect: List[Column] = columns.map(field =>
+        col(field).as(getFieldAlias(field))
+    )
+    df.select(fieldsToSelect: _*)
+}
+
+def normalizeSchema(df: DataFrame): DataFrame = {
+    val schema = df.columns.toList
+    df.transform(selectFieldsNormalized(schema))
+}
+
+FirstAtRe = ^_
+AliasRe = [\s_.:@]+
+getFieldAlias: (field_name: String)String
+selectFieldsNormalized: (columns: List[String])(df: org.apache.spark.sql.DataFrame)org.apache.spark.sql.DataFrame
+normalizeSchema: (df: org.apache.spark.sql.DataFrame)org.apache.spark.sql.DataFrame
+
+val winePath = "~/Research/mlflow-workshop/examples/wine_quality/data/winequality-red.csv"
+val modelPath = "/tmp/mlflow/artifactStore/0/96cba14c6e4b452e937eb5072467bf79/artifacts/model"
+winePath = ~/Research/mlflow-workshop/examples/wine_quality/data/winequality-red.csv
+modelPath = /tmp/mlflow/artifactStore/0/96cba14c6e4b452e937eb5072467bf79/artifacts/model
+
+
+val df = spark.read
+              .format("csv")
+              .option("header", "true")
+              .option("delimiter", ";")
+              .load(winePath)
+              .transform(normalizeSchema)
+
+
+%%PySpark
+import mlflow
+from mlflow import pyfunc
+
+model_path = "/tmp/mlflow/artifactStore/0/96cba14c6e4b452e937eb5072467bf79/artifacts/model"
+wine_quality_udf = mlflow.pyfunc.spark_udf(spark, model_path)
+
+spark.udf.register("wineQuality", wine_quality_udf)
+
+df.createOrReplaceTempView("wines")
+
+%%SQL
+SELECT
+    quality,
+    wineQuality(
+        fixed_acidity,
+        volatile_acidity,
+        citric_acid,
+        residual_sugar,
+        chlorides,
+        free_sulfur_dioxide,
+        total_sulfur_dioxide,
+        density,
+        pH,
+        sulphates,
+        alcohol
+    ) AS prediction
+FROM wines
+LIMIT 10
+
++-------+------------------+
+|quality|        prediction|
++-------+------------------+
+|      5| 5.576883967129615|
+|      5|  5.50664776916154|
+|      5| 5.525504822954496|
+|      6| 5.504311247097457|
+|      5| 5.576883967129615|
+|      5|5.5556903912725755|
+|      5| 5.467882654744997|
+|      7| 5.710602976324739|
+|      7| 5.657319539336507|
+|      5| 5.345098606538708|
++-------+------------------+
+
+
+spark.catalog.listFunctions.filter('name like "%wineQuality%").show(20, false)
++-----------+--------+-----------+---------+-----------+
+|name       |database|description|className|isTemporary|
++-----------+--------+-----------+---------+-----------+
+|wineQuality|null    |null       |null     |true       |
++-----------+--------+-----------+---------+-----------+
