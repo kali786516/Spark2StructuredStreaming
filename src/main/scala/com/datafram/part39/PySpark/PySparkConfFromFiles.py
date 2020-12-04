@@ -13,3 +13,5 @@ sc_conf = SparkConf()
 configObj = sc_conf.setAppName(job_name).setAll(genericSparkConfig)
 
 spark = SparkSession.builder.enableHiveSupport().appName(job_name).enableHiveSupport().config(configObj).getOrCreate()
+
+#https://mapr.com/support/s/article/Override-any-configuration-file-in-Spark-for-users?language=en_US
